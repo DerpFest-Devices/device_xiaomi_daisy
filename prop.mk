@@ -292,6 +292,10 @@ persist.vendor.vt.supported=1 \
 persist.vendor.sys.cnd.iwlan=1 \
 persist.vendor.cne.logging.qxdm=3974
 
+# RCS
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.rcs.supported=1
+
 # Shutdown
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.build.shutdown_timeout=2
