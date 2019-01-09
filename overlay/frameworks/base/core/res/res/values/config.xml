@@ -678,4 +678,8 @@
 
    <!-- Default state for LiveDisplay -->
    <bool name="config_liveDisplayAvailable">true</bool>
+
+    <!-- Disable rounded corners on windows to improve graphics performance -->
+    <bool name="config_supportsRoundedCornersOnWindows">false</bool>
+
 </resources>
