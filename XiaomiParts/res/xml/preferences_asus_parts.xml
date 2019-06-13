@@ -133,4 +133,15 @@
             android:title="@string/microphone_gain" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="usb_fastcharge"
+        android:title="@string/usb_fastcharge_title" >
+    <com.asus.zenparts.preferences.SecureSettingSwitchPreference
+            android:key="fastcharge"
+            android:defaultValue="true"
+            android:title="@string/fastcharge_title"
+            android:icon="@drawable/ic_usb_fastcharge"
+            android:summary="@string/fastcharge_summary" />
+    </PreferenceCategory>
 </PreferenceScreen>
