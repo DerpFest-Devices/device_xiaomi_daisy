@@ -193,6 +193,11 @@ ro.lmk.debug=false
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.control_privapp_permissions=log
 
+# IOP properties
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.iop.enable_uxe=1 \
+vendor.perf.iop_v3.enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
