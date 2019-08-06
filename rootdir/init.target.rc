@@ -262,3 +262,7 @@ service ppd /vendor/bin/mm-pp-dpps
 # USB Fastcharge
   chown system system /sys/kernel/fast_charge/force_fast_charge
   chmod 0660 /sys/kernel/fast_charge/force_fast_charge
+
+# Backlight Dimmer
+  chown system system /sys/module/mdss_fb/parameters/backlight_dimmer
+  chmod 0660 /sys/module/mdss_fb/parameters/backlight_dimmer
