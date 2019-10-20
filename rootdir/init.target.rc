@@ -232,6 +232,13 @@ on boot
     chown system system /proc/touchpanel/wakeup_gesture
     chmod 0660 /proc/touchpanel/wakeup_gesture
 
+on boot
+# Access permission for smart charging
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
 # KCAL permissions
   chown system system /sys/devices/platform/kcal_ctrl.0/kcal
   chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
