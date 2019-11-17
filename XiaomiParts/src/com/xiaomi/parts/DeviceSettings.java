@@ -19,9 +19,10 @@ package com.xiaomi.parts;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
+import android.os.Handler;
+import androidx.preference.PreferenceFragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 
 import com.xiaomi.parts.kcal.KCalSettingsActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
