@@ -250,8 +250,10 @@ service ppd /vendor/bin/mm-pp-dpps
 # Audio gain permissions
   chown system system /sys/kernel/sound_control/headphone_gain
   chown system system /sys/kernel/sound_control/mic_gain
+  chown system system /sys/kernel/sound_control/earpiece_gain
   chmod 0660 /sys/kernel/sound_control/headphone_gain
   chmod 0660 /sys/kernel/sound_control/mic_gain
+  chmod 0660 /sys/kernel/sound_control/earpiece_gain
 
 # Torch permissions
   chmod 0660 /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness

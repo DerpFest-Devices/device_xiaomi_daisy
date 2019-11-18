@@ -54,7 +54,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
     public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
-
+    public static final String PREF_EARPIECE_GAIN = "earpiece_gain";
+    public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
     public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
@@ -68,8 +69,8 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mPreset;
     private CustomSeekBarPreference mHeadphoneGain;
     private CustomSeekBarPreference mMicrophoneGain;
+    private CustomSeekBarPreference mEarpieceGain;
     private SecureSettingSwitchPreference mFastcharge;
-
     private SecureSettingSwitchPreference mBacklightDimmer;
 
     @Override
@@ -141,6 +142,9 @@ public class DeviceSettings extends PreferenceFragment implements
         mMicrophoneGain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
 
+        mEarpieceGain = (CustomSeekBarPreference) findPreference(PREF_EARPIECE_GAIN);
+        mEarpieceGain.setOnPreferenceChangeListener(this);
+
         if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
             mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
             mFastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
@@ -198,6 +202,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_MICROPHONE_GAIN:
                 FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
+                break;
+
+            case PREF_EARPIECE_GAIN:
+                FileUtils.setValue(EARPIECE_GAIN_PATH, (int) value);
                 break;
 
             case PREF_USB_FASTCHARGE:
