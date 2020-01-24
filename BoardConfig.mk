@@ -193,9 +193,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Security Patch Level
-VENDOR_SECURITY_PATCH := 2020-02-05
-
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
