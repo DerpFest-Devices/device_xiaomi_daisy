@@ -1,9 +1,4 @@
-allow radio vendor_file:file { execute getattr open read };
-allow radio adb_data_file:file { getattr open read };
-allow radio gpuservice:binder { call };
-allow radio theme_prop:file { read open getattr };
-allow radio system_app_data_file:dir { getattr };
-allow radio sysfs_kgsl:dir { search };
-allow radio cnd:binder { call };
-allow radio qcom_ims_prop:file { open read getattr };
-allow radio unlabeled:file read;
+binder_call(radio, cnd) 
+allow radio hal_datafactory_hwservice:hwservice_manager find; 
+allow radio hal_iwlan_hwservice:hwservice_manager find;
+get_prop(radio, qcom_ims_prop)
