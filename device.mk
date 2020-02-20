@@ -422,6 +422,9 @@ PRODUCT_PACKAGES += \
     libjson \
     libjson.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/vendor/etc/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
