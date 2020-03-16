@@ -4,3 +4,4 @@ allow healthd charger_exec:file { entrypoint };
 allow healthd charger_exec:file { read };
 allow healthd charger_exec:file { execute };
 allow healthd charger_exec:file { getattr };
+allow healthd charger_exec:file { entrypoint };
