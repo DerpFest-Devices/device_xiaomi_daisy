@@ -142,7 +142,10 @@ vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
-vendor.video.disable.ubwc=1
+vendor.video.disable.ubwc=1 \
+persist.sys.wfd.virtual=0 \
+vendor.gralloc.disable_wb_ubwc \
+persist.sys.wfd.nohdcp=1
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
