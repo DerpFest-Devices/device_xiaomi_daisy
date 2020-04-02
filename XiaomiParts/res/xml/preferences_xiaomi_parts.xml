@@ -15,17 +15,6 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory
-        android:key="camera"
-        android:title="@string/camera_title">
-
-        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
-            android:defaultValue="true"
-            android:key="hal3"
-            android:icon="@drawable/ic_camera"
-            android:title="@string/camera_hal3_title" />
-
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="torch"
