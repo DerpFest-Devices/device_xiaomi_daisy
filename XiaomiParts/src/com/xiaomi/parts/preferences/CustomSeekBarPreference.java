@@ -305,7 +305,6 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         }
     }
 
-    @Override
     public void setMax(int max) {
         mMaxValue = max;
         mSeekBar.setMax(mMaxValue - mMinValue);
