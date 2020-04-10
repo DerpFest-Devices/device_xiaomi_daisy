@@ -30,7 +30,8 @@
     <application
         android:label="@string/advanced_settings"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/CustomOptionsTheme">
+
         <receiver
             android:name=".BootReceiver"
             android:defaultToDeviceProtectedStorage="true"
@@ -74,6 +75,7 @@
         <activity
             android:name=".kcal.KCalSettingsActivity"
             android:exported="false"
+            android:theme="@style/CustomOptionsTheme"
             android:label="@string/advanced_settings_kcal">
 
             <intent-filter>
