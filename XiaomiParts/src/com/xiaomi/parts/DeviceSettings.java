@@ -29,6 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.xiaomi.parts.kcal.KCalSettingsActivity;
+import com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
@@ -71,6 +72,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private VibratorStrengthPreference mVibratorStrength;
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
+    private Preference mAmbientPref;
     private SecureSettingSwitchPreference mEnableDirac;
     private SecureSettingListPreference mHeadsetType;
     private SecureSettingListPreference mPreset;
@@ -103,6 +105,16 @@ public class DeviceSettings extends PreferenceFragment implements
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
+        });
+
+        mAmbientPref = findPreference("ambient_display_gestures");
+        mAmbientPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getContext(), AmbientGesturePreferenceActivity.class);
+                startActivity(intent);
+                return true;
+            }
         });
 
         mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
