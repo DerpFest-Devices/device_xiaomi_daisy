@@ -10,7 +10,7 @@ exec u:r:su:s0 root root -- /init.spectrum.sh
 # Enable Spectrum support
 setprop spectrum.support 1
 # Add kernel name
-setprop persist.spectrum.kernel MadKernel
+setprop persist.spectrum.kernel MadKernel-Daisy
 
 # Balance (default profile)
 on property:persist.spectrum.profile=0
@@ -20,7 +20,16 @@ write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
 # Configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
 
-# Gaming
+# Configure freq
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "2016000"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "2016000"
+
+#Configure gpu
+write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
+
+# Performance
 on property:persist.spectrum.profile=1
 # Configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
@@ -28,12 +37,47 @@ write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
 # Configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "performance"
 
+# Configure freq
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "2016000"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "2016000"
+
+#Configure gpu
+write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
+
 # Battery
 on property:persist.spectrum.profile=2
 # Configure governor settings for little cluster
-write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
 
 # Configure governor settings for big cluster
-write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "powersave"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
+
+# Configure freq
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1401600"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "1401600"
+
+#Configure gpu
+write /sys/class/kgsl/kgsl-3d0/devfreq/governor "simple_ondemand"
+
+# Gaming
+on property:persist.spectrum.profile=3
+# Configure governor settings for little cluster
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
+
+# Configure governor settings for big cluster
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
+
+# Configure freq
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq "652800"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "2016000"
+write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "2016000"
+
+#Configure gpu
+write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
 
 # END
