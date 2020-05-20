@@ -5,3 +5,4 @@ allow mediaprovider boottime_prop:file read;
 allow mediaprovider shell_data_file:dir { getattr };
 allow mediaprovider app_data_file:dir { search };
 allow mediaprovider mnt_media_rw_file:dir { getattr };
+allow mediaprovider unlabeled:file read;

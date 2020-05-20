@@ -68,7 +68,7 @@ allow untrusted_app sysfs_graphics:file { read };
 allow untrusted_app sysfs_devfreq:dir { search };
 allow untrusted_app proc_version:file { read };
 allow untrusted_app proc_net:file { read open getattr };
-allow untrusted_app unlabeled:file { getattr };
+allow untrusted_app unlabeled:file { getattr read };
 allow untrusted_app proc_keys:file { getattr };
 allow untrusted_app proc_kmsg:file { getattr };
 allow untrusted_app proc_misc:file { getattr };

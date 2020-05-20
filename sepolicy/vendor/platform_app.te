@@ -38,6 +38,7 @@ allow platform_app sysfs_wakeup_reasons:dir { read open };
 allow platform_app sysfs_slpi:dir { read open };
 allow platform_app sysfs_kernel_notes:file { getattr read open };
 allow platform_app sysfs_smd_open_timeout:file { getattr read open };
+allow platform_app unlabeled:file read;
 
 # Face Unlock
 get_prop(platform_app, camera_prop)
