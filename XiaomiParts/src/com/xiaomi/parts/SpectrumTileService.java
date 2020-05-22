@@ -22,7 +22,7 @@ public class SpectrumTileService extends TileService {
             int currentState = FileUtils.getintProp(DeviceSettings.SPECTRUM_SYSTEM_PROPERTY, 0);
 
             int nextState;
-            if (currentState == 4) {
+            if (currentState == 3) {
             nextState = 0;
         } else {
             nextState = currentState + 1;
