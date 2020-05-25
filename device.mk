@@ -480,7 +480,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl \
-    libwfdaac
+    libmediaextractorservice
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
