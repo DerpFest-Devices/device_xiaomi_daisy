@@ -668,11 +668,14 @@
    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
    <bool name="config_intrusiveBatteryLed">true</bool>
 
-    <!-- True if the firmware supports Wi-Fi link probing -->
-    <bool name="config_wifi_link_probing_supported">false</bool>
+   <!-- True if the firmware supports Wi-Fi link probing -->
+   <bool name="config_wifi_link_probing_supported">false</bool>
 
-    <!-- Enables or disables fading edges when marquee is enabled in TextView.
-         Off by default, since the framebuffer readback used to implement the
-         fading edges is prohibitively expensive on most GPUs. -->
-    <bool name="config_ui_enableFadingMarquee">true</bool>
+   <!-- Enables or disables fading edges when marquee is enabled in TextView.
+        Off by default, since the framebuffer readback used to implement the
+        fading edges is prohibitively expensive on most GPUs. -->
+   <bool name="config_ui_enableFadingMarquee">true</bool>
+
+   <!-- Default state for LiveDisplay -->
+   <bool name="config_liveDisplayAvailable">true</bool>
 </resources>
