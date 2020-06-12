@@ -46,9 +46,9 @@
             android:defaultValue="80"
             android:key="yellow_flash"
             android:icon="@drawable/ic_flash"
-            android:title="@string/yellowflash_intensity_title" /> -->
+            android:title="@string/yellowflash_intensity_title" /> 
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:key="vibration"

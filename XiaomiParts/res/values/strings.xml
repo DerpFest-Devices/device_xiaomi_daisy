@@ -26,6 +26,12 @@
     <!-- Backlight Dimmer -->
     <string name="backlight_dimmer">Backlight Dimmer</string>
     <string name="backlight_summary">Dim the display to the maximum value</string>
+
+    <!-- Vibration -->
+    <string name="vibration_title">Vibration feedback</string>
+    <string name="vibration_strength_title">System Strength</string>
+    <string name="vibration_call_strength_title">Call Strength</string>
+    <string name="vibration_notif_strength_title">Notification Strength</string>
 	
     <!-- Torch
     <string name="torch_title">Torch</string>
@@ -33,12 +39,6 @@
     <string name="white_torch_brightness_title">White Torch Brightness</string>
     <string name="cameraflash_title">Camera Flash</string>
     <string name="yellowflash_intensity_title">Yellow Light Intensity</string> -->
-	
-    <!-- Vibration -->
-    <string name="vibration_title">Vibration feedback</string>
-    <string name="vibration_strength_title">System Strength</string>
-    <string name="vibration_call_strength_title">Call Strength</string>
-    <string name="vibration_notif_strength_title">Notification Strength</string>
 
     <!-- Spectrum Profiles -->
     <string name="spectrum_profile_title">Spectrum</string>
