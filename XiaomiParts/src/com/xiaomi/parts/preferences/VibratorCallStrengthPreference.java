@@ -1,5 +1,6 @@
 /*
 * Copyright (C) 2016 The OmniROM Project
+* Copyright (C) 2018 Android Open Source Illusion Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -12,7 +13,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.com/licenses/>.
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
 package com.xiaomi.parts.preferences;
@@ -29,18 +30,18 @@ import com.xiaomi.parts.BootReceiver;
 
 import java.util.List;
 
-public class VibratorStrengthPreference extends CustomSeekBarPreference {
+public class VibratorCallStrengthPreference extends CustomSeekBarPreference {
 
-    // from drivers/platform/msm/qpnp-haptic.c
     private static int mMinVal = 647;
     private static int mMaxVal = 3596;
     private static int mDefVal = 2007;
     private Vibrator mVibrator;
 
-    private static final String FILE_LEVEL = "sys/class/leds/vibrator/vmax_mv_user";
+    private static final String FILE_LEVEL = "/sys/class/leds/vibrator/vmax_mv_call";
     private static final long testVibrationPattern[] = {0,250};
 
-    public VibratorStrengthPreference(Context context, AttributeSet attrs) {
+
+      public VibratorCallStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mInterval = 10;
@@ -58,6 +59,7 @@ public class VibratorStrengthPreference extends CustomSeekBarPreference {
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
     }
 
+
     public static boolean isSupported() {
         return Utils.fileWritable(FILE_LEVEL);
     }
@@ -67,7 +69,7 @@ public class VibratorStrengthPreference extends CustomSeekBarPreference {
             return;
         }
 
-        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_VIBSTRENGTH, String.valueOf(mDefVal));
+        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_CALL_VIBSTRENGTH, String.valueOf(mDefVal));
         Utils.writeValue(FILE_LEVEL, storedValue);
     }
 
@@ -78,7 +80,7 @@ public class VibratorStrengthPreference extends CustomSeekBarPreference {
     private void saveValue(String newValue) {
         Utils.writeValue(FILE_LEVEL, newValue);
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-        editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
+        editor.putString(DeviceSettings.KEY_CALL_VIBSTRENGTH, newValue);
         editor.apply();
         mVibrator.vibrate(testVibrationPattern, -1);
     }
@@ -87,4 +89,5 @@ public class VibratorStrengthPreference extends CustomSeekBarPreference {
     protected void changeValue(int newValue) {
         saveValue(String.valueOf(newValue));
     }
+
 }
