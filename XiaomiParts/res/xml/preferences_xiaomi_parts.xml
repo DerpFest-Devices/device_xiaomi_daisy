@@ -112,6 +112,19 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="boost"
+        android:title="@string/boost_title" >
+
+        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
+            android:key="touchboost"
+            android:defaultValue="true"
+            android:title="@string/touchboost_title"
+            android:icon="@drawable/ic_boost"
+            android:summary="@string/touchboost_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="audio"
         android:title="@string/audio_title">
 
@@ -187,14 +200,4 @@
             android:summary="@string/fastcharge_summary" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="boost"
-        android:title="@string/boost_title" >
-    <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
-            android:key="touchboost"
-            android:defaultValue="true"
-            android:title="@string/touchboost_title"
-            android:icon="@drawable/ic_boost"
-            android:summary="@string/touchboost_summary" />
-    </PreferenceCategory>
 </PreferenceScreen>
