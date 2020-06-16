@@ -79,6 +79,8 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String PREF_GPUBOOST = "gpuboost";
     public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.gpuboost.profile";
+    public static final String PREF_CPUBOOST = "cpuboost";
+    public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.cpuboost.profile";
 
     private CustomSeekBarPreference mTorchBrightness;
     private VibratorStrengthPreference mVibratorStrength;
@@ -98,6 +100,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mBacklightDimmer;
     private SecureSettingSwitchPreference mTouchboost;
     private SecureSettingListPreference mGPUBOOST;
+    private SecureSettingListPreference mCPUBOOST;
     private static Context mContext;
 
     @Override
@@ -216,6 +219,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mGPUBOOST.setSummary(mGPUBOOST.getEntry());
         mGPUBOOST.setOnPreferenceChangeListener(this);
 
+        mCPUBOOST = (SecureSettingListPreference) findPreference(PREF_CPUBOOST);
+        mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
+        mCPUBOOST.setSummary(mCPUBOOST.getEntry());
+        mCPUBOOST.setOnPreferenceChangeListener(this);
+
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
@@ -284,6 +292,12 @@ public class DeviceSettings extends PreferenceFragment implements
                 mGPUBOOST.setValue((String) value);
                 mGPUBOOST.setSummary(mGPUBOOST.getEntry());
                 FileUtils.setStringProp(GPUBOOST_SYSTEM_PROPERTY, (String) value);
+                break;
+
+            case PREF_CPUBOOST:
+                mCPUBOOST.setValue((String) value);
+                mCPUBOOST.setSummary(mCPUBOOST.getEntry());
+                FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY, (String) value);
                 break;
 
             case PREF_KEY_FPS_INFO:

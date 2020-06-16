@@ -355,7 +355,9 @@ PRODUCT_PACKAGES += \
     move_wifi_data.sh \
     ueventd.qcom.rc \
     init.gpuboost.rc \
-    init.gpuboost.sh
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
