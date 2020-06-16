@@ -73,6 +73,10 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 
+    public static final String CATEGORY_TOUCHBOOST = "msm_touchboost";
+    public static final String PREF_MSM_TOUCHBOOST = "touchboost";
+    public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
+
     private CustomSeekBarPreference mTorchBrightness;
     private VibratorStrengthPreference mVibratorStrength;
     private VibratorCallStrengthPreference mVibratorCallStrength;
@@ -89,6 +93,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mSpeakerGain;
     private SecureSettingSwitchPreference mFastcharge;
     private SecureSettingSwitchPreference mBacklightDimmer;
+    private SecureSettingSwitchPreference mTouchboost;
     private static Context mContext;
 
     @Override
@@ -193,6 +198,14 @@ public class DeviceSettings extends PreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
         }
 
+        if (FileUtils.fileWritable(MSM_TOUCHBOOST_PATH)) {
+            mTouchboost = (SecureSettingSwitchPreference) findPreference(PREF_MSM_TOUCHBOOST);
+            mTouchboost.setChecked(FileUtils.getFileValueAsBoolean(MSM_TOUCHBOOST_PATH, true));
+            mTouchboost.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_TOUCHBOOST));
+        }
+
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
@@ -255,6 +268,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_SPEAKER_GAIN:
                  FileUtils.setValue(SPEAKER_GAIN_PATH, (int) value);
+                break;
+
+            case PREF_MSM_TOUCHBOOST:
+                FileUtils.setValue(MSM_TOUCHBOOST_PATH, (boolean) value);
                 break;
 
             case PREF_KEY_FPS_INFO:

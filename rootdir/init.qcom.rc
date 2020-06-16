@@ -221,6 +221,10 @@ on boot
     chmod 0660 /sys/kernel/sound_control/earpiece_gain
     chmod 0660 /sys/kernel/sound_control/speaker_gain
 
+    # Touchboost
+    chown system system /sys/module/msm_performance/parameters/touchboost
+    chmod 0660 /sys/module/msm_performance/parameters/touchboost
+
     # Torch
     chown root system /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness
     chmod 0660 /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness
