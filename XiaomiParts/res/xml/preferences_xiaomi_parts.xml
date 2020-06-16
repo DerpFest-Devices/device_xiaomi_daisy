@@ -122,6 +122,16 @@
             android:icon="@drawable/ic_boost"
             android:summary="@string/touchboost_summary" />
 
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/gpuboost_dialogTitle"
+            android:entries="@array/gpuboost_profiles"
+            android:entryValues="@array/gpuboost_values"
+            android:key="gpuboost"
+            android:summary="@string/gpuboost_summary"
+            android:icon="@drawable/ic_gpuboost" 
+            android:title="@string/gpuboost_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

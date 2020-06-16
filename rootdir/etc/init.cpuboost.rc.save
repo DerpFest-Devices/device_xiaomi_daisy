@@ -1,0 +1,4 @@
+# cpuboost by ronax 
+# depends on caf cpu boost driver
+# Initialization
+on property:sys.boot_completed=1
