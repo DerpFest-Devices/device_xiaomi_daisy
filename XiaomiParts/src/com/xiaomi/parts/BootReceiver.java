@@ -26,6 +26,7 @@ import android.text.TextUtils;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
+import com.xiaomi.parts.preferences.YellowFlashPreference;
 
 import com.xiaomi.parts.kcal.Utils;
 import com.xiaomi.parts.ambient.SensorsDozeService;
@@ -66,6 +67,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             VibratorStrengthPreference.restore(context);
 	    VibratorCallStrengthPreference.restore(context);
 	    VibratorNotifStrengthPreference.restore(context);
+            YellowFlashPreference.restore(context);
         }
 
         FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,

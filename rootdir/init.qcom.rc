@@ -191,6 +191,10 @@ on boot
     chown root system /sys/kernel/dload/dload_mode
     chmod 0660 /sys/kernel/dload/dload_mode
 
+    # Yellow light intensity
+    chown system system /sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness
+
     # Vibration
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level

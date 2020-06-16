@@ -30,6 +30,8 @@
     <!-- Torch -->
     <string name="torch_title">Torch</string>
     <string name="torch_brightness_title">Brightness</string>
+    <string name="cameraflash_title">Camera Flash</string>
+    <string name="yellowflash_intensity_title">Yellow Light Intensity</string>
 	
     <!-- Vibration -->
     <string name="vibration_title">Vibration feedback</string>
