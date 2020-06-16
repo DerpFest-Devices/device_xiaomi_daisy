@@ -157,6 +157,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="chargingled"
+        android:title="@string/chargingled_title">
+
+        <com.xiaomi.parts.preferences.LedBlinkPreference
+            android:defaultValue="3"
+            android:key="charging_led"
+            android:icon="@drawable/ic_led"
+            android:title="@string/led_blinking_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="audio"
         android:title="@string/audio_title">
 

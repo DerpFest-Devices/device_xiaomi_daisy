@@ -242,4 +242,8 @@
     <string name="cpuboost_medium">Medium</string>
     <string name="cpuboost_low">Low</string>
     <string name="cpuboost_disable">Disable</string>
+
+    <!-- LED Brightness -->
+    <string name="chargingled_title">Charging LED</string>
+    <string name="led_blinking_title">Blinking Intensity</string>
 </resources>

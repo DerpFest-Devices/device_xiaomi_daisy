@@ -33,6 +33,7 @@ import com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
+import com.xiaomi.parts.preferences.LedBlinkPreference;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
@@ -44,6 +45,10 @@ public class DeviceSettings extends PreferenceFragment implements
     final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
     public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness";
+
+    public static final String PREF_CHARGING_LED = "charging_led";
+    public static final String CHARGING_LED_PATH = "/sys/devices/soc/leds-atc-25" +
+            "/driver/leds-atc-25/leds/charging/max_brightness";
 
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
@@ -84,6 +89,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.cpuboost.profile";
 
     private CustomSeekBarPreference mTorchBrightness;
+    private LedBlinkPreference mLedBlink;
     private YellowFlashPreference mYellowFlash;
     private VibratorStrengthPreference mVibratorStrength;
     private VibratorCallStrengthPreference mVibratorCallStrength;
@@ -229,6 +235,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
         if (mYellowFlash != null) {
             mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
+        }
+
+        mLedBlink = (LedBlinkPreference) findPreference(PREF_CHARGING_LED);
+        if (mLedBlink != null) {
+            mLedBlink.setEnabled(LedBlinkPreference.isSupported());
         }
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);

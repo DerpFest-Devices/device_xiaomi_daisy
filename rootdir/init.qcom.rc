@@ -231,6 +231,10 @@ on boot
     chown system system /sys/module/msm_performance/parameters/touchboost
     chmod 0660 /sys/module/msm_performance/parameters/touchboost
 
+    # Charging led
+    chown system system /sys/devices/soc/leds-atc-25/driver/leds-atc-25/leds/charging/max_brightness
+    chmod 0660 /sys/devices/soc/leds-atc-25/driver/leds-atc-25/leds/charging/max_brightness
+
     # Torch
     chown root system /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness
     chmod 0660 /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness
