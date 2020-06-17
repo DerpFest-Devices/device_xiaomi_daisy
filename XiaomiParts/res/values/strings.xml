@@ -29,7 +29,8 @@
 	
     <!-- Torch -->
     <string name="torch_title">Torch</string>
-    <string name="torch_brightness_title">Brightness</string>
+    <string name="yellow_torch_brightness_title">Yellow Torch Brightness</string>
+    <string name="white_torch_brightness_title">White Torch Brightness</string>
     <string name="cameraflash_title">Camera Flash</string>
     <string name="yellowflash_intensity_title">Yellow Light Intensity</string>
 	
