@@ -33,7 +33,7 @@ import java.util.List;
 public class VibratorNotifStrengthPreference extends CustomSeekBarPreference {
 
     // from drivers/platform/msm/qpnp-haptic.c
-    private static int mMinVal = 647;
+    private static int mMinVal = 116;
     private static int mMaxVal = 3596;
     private static int mDefVal = 2007;
     private Vibrator mVibrator;

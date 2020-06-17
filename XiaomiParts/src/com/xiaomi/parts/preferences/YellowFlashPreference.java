@@ -32,8 +32,7 @@ public class YellowFlashPreference extends CustomSeekBarPreference {
     private static int mMaxVal = 1500;
     private static int mDefVal = 900;
 
-    private static final String FILE_LEVEL = "/sys/devices/soc/qpnp-flash-led-25" +
-               "/driver/qpnp-flash-led-23/leds/led:flash_1/max_brightness";
+    private static final String FILE_LEVEL = "/sys/devices/platform/soc/soc:qcom,camera-flash/leds/torch-light1/max_brightness";
 
     public YellowFlashPreference(Context context, AttributeSet attrs) {
         super(context, attrs);

@@ -236,11 +236,17 @@ on boot
     chmod 0660 /sys/devices/soc/leds-atc-25/driver/leds-atc-25/leds/charging/max_brightness
 
     # Torch
-    chown root system /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness
-    chown root system /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness
-    write /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness 0
+    chown root system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+    chown root system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+    chown root system /sys/class/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/class/leds/led:torch_0/max_brightness
+    chown root system /sys/class/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/class/leds/led:torch_1/max_brightness
+    chown root system /sys/devices/platform/soc/soc:qcom,camera-flash/leds/torch-light1/max_brightness
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,camera-flash/leds/torch-light1/max_brightness
+    write /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness 0
 
     # Backlight dimmer
     chown system system /sys/module/mdss_fb/parameters/backlight_dimmer
