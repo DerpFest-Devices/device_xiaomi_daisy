@@ -86,6 +86,15 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String HIGH_PERF_AUDIO = "highperfaudio";
     public static final String HIGH_AUDIO_PATH = "/sys/module/snd_soc_wcd9330/parameters/high_perf_mode";
 
+    public static final String PERF_MSM_THERMAL = "msmthermal";
+    public static final String MSM_THERMAL_PATH = "/sys/module/msm_thermal/parameters/enabled";
+    public static final String PERF_CORE_CONTROL = "corecontrol";
+    public static final String CORE_CONTROL_PATH = "/sys/module/msm_thermal/core_control/enabled";
+    public static final String PERF_VDD_RESTRICTION = "vddrestrict";
+    public static final String VDD_RESTRICTION_PATH = "/sys/module/msm_thermal/vdd_restriction/enabled";
+    public static final String PREF_CPUCORE = "cpucore";
+    public static final String CPUCORE_SYSTEM_PROPERTY = "persist.cpucore.profile";
+
     public static final String PREF_GPUBOOST = "gpuboost";
     public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.gpuboost.profile";
     public static final String PREF_CPUBOOST = "cpuboost";
@@ -96,6 +105,10 @@ public class DeviceSettings extends PreferenceFragment implements
     private LedBlinkPreference mLedBlink;
     private YellowFlashPreference mYellowFlash;
     private SecureSettingSwitchPreference mHighAudio;
+    private SecureSettingSwitchPreference mMsmThermal;
+    private SecureSettingSwitchPreference mCoreControl;
+    private SecureSettingSwitchPreference mVddRestrict;
+    private SecureSettingListPreference mCPUCORE;
     private VibratorStrengthPreference mVibratorStrength;
     private VibratorCallStrengthPreference mVibratorCallStrength;
     private VibratorNotifStrengthPreference mVibratorNotifStrength;
@@ -253,6 +266,35 @@ public class DeviceSettings extends PreferenceFragment implements
             mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
         }
 
+        if (FileUtils.fileWritable(MSM_THERMAL_PATH)) {
+            mMsmThermal = (SecureSettingSwitchPreference) findPreference(PERF_MSM_THERMAL);
+            mMsmThermal.setChecked(FileUtils.getFilesValueAsBoolean(MSM_THERMAL_PATH, true));
+            mMsmThermal.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(PERF_MSM_THERMAL));
+        }
+
+        if (FileUtils.fileWritable(CORE_CONTROL_PATH)) {
+            mCoreControl = (SecureSettingSwitchPreference) findPreference(PERF_CORE_CONTROL);
+            mCoreControl.setChecked(FileUtils.getFileValueAsBoolean(CORE_CONTROL_PATH, true));
+            mCoreControl.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(PERF_CORE_CONTROL));
+        }
+
+        if (FileUtils.fileWritable(VDD_RESTRICTION_PATH)) {
+            mVddRestrict = (SecureSettingSwitchPreference) findPreference(PERF_VDD_RESTRICTION);
+            mVddRestrict.setChecked(FileUtils.getFileValueAsBoolean(VDD_RESTRICTION_PATH, true));
+            mVddRestrict.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(PERF_VDD_RESTRICTION));
+        }
+
+        mCPUCORE = (SecureSettingListPreference) findPreference(PREF_CPUCORE);
+        mCPUCORE.setValue(FileUtils.getStringProp(CPUCORE_SYSTEM_PROPERTY, "0"));
+        mCPUCORE.setSummary(mCPUCORE.getEntry());
+        mCPUCORE.setOnPreferenceChangeListener(this);
+
         mLedBlink = (LedBlinkPreference) findPreference(PREF_CHARGING_LED);
         if (mLedBlink != null) {
             mLedBlink.setEnabled(LedBlinkPreference.isSupported());
@@ -274,6 +316,24 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case KEY_YELLOW_TORCH_BRIGHTNESS:
                 FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
+                break;
+
+            case PERF_MSM_THERMAL:
+                FileUtils.setValue(MSM_THERMAL_PATH, (boolean) value);
+                break;
+
+            case PERF_CORE_CONTROL:
+                FileUtils.setValue(CORE_CONTROL_PATH, (boolean) value);
+                break;
+
+            case PERF_VDD_RESTRICTION:
+                FileUtils.setValue(VDD_RESTRICTION_PATH, (boolean) value);
+                break;
+
+            case PREF_CPUCORE:
+                mCPUCORE.setValue((String) value);
+                mCPUCORE.setSummary(mCPUCORE.getEntry());
+                FileUtils.setStringProp(CPUCORE_SYSTEM_PROPERTY, (String) value);
                 break;
 
             case PREF_SPECTRUM:

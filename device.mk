@@ -357,7 +357,9 @@ PRODUCT_PACKAGES += \
     init.gpuboost.rc \
     init.gpuboost.sh \
     init.cpuboost.rc \
-    init.cpuboost.sh
+    init.cpuboost.sh \
+    init.parallax.rc \
+    init.parallax.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
