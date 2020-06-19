@@ -94,6 +94,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String VDD_RESTRICTION_PATH = "/sys/module/msm_thermal/vdd_restriction/enabled";
     public static final String PREF_CPUCORE = "cpucore";
     public static final String CPUCORE_SYSTEM_PROPERTY = "persist.cpucore.profile";
+    public static final String PREF_LKM = "lkmprofile";
+    public static final String LKM_SYSTEM_PROPERTY = "persist.lkm.profile";
 
     public static final String PREF_GPUBOOST = "gpuboost";
     public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.gpuboost.profile";
@@ -109,6 +111,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mCoreControl;
     private SecureSettingSwitchPreference mVddRestrict;
     private SecureSettingListPreference mCPUCORE;
+    private SecureSettingListPreference mLKM;
     private VibratorStrengthPreference mVibratorStrength;
     private VibratorCallStrengthPreference mVibratorCallStrength;
     private VibratorNotifStrengthPreference mVibratorNotifStrength;
@@ -295,6 +298,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mCPUCORE.setSummary(mCPUCORE.getEntry());
         mCPUCORE.setOnPreferenceChangeListener(this);
 
+        mLKM = (SecureSettingListPreference) findPreference(PREF_LKM);
+        mLKM.setValue(FileUtils.getStringProp(LKM_SYSTEM_PROPERTY, "0"));
+        mLKM.setSummary(mLKM.getEntry());
+        mLKM.setOnPreferenceChangeListener(this);
+
         mLedBlink = (LedBlinkPreference) findPreference(PREF_CHARGING_LED);
         if (mLedBlink != null) {
             mLedBlink.setEnabled(LedBlinkPreference.isSupported());
@@ -334,6 +342,12 @@ public class DeviceSettings extends PreferenceFragment implements
                 mCPUCORE.setValue((String) value);
                 mCPUCORE.setSummary(mCPUCORE.getEntry());
                 FileUtils.setStringProp(CPUCORE_SYSTEM_PROPERTY, (String) value);
+                break;
+
+            case PREF_LKM:
+                mLKM.setValue((String) value);
+                mLKM.setSummary(mLKM.getEntry());
+                FileUtils.setStringProp(LKM_SYSTEM_PROPERTY, (String) value);
                 break;
 
             case PREF_SPECTRUM:

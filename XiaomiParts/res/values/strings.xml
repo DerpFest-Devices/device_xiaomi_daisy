@@ -271,4 +271,19 @@
     <string name="cpucore_five">5</string>
     <string name="cpucore_six">6</string>
     <string name="cpucore_seven">7</string>
+
+    <string name="misc_title">Miscellaneous</string>
+    <!-- LKM Profiles -->
+    <string name="lkmprofile_title">Low Memory Killer</string>
+    <string name="lkmprofile_summary">Low Memory Killer</string>
+    <string name="lkmprofile_dialogTitle">Choose your LKM profile</string>
+
+    <!-- Values for LKM Presets -->
+    <string name="lkmprofile_veryaggressive">Very Aggressive</string>
+    <string name="lkmprofile_aggressive">Aggressive</string>
+    <string name="lkmprofile_light">Light</string>
+    <string name="lkmprofile_medium">Medium</string>
+    <string name="lkmprofile_verylight">Very Light</string>
+    <string name="lkmprofile_default">Default</string>
+    <string name="lkmprofile_disable">Disable</string>
 </resources>

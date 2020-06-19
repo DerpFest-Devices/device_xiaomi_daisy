@@ -201,6 +201,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="misc"
+        android:title="@string/misc_title">
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/lkmprofile_dialogTitle"
+            android:entries="@array/lkmprofile_profiles"
+            android:entryValues="@array/lkmprofile_values"
+            android:key="lkmprofile"
+            android:summary="@string/lkmprofile_summary"
+            android:icon="@drawable/ic_lkm" 
+            android:title="@string/lkmprofile_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="chargingled"
         android:title="@string/chargingled_title">
 

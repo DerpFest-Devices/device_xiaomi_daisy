@@ -214,4 +214,23 @@
         <item>6</item>
         <item>7</item>
     </string-array>
+
+    <string-array name="lkmprofile_profiles">
+        <item>@string/lkmprofile_default</item>
+        <item>@string/lkmprofile_verylight</item>
+        <item>@string/lkmprofile_light</item>
+        <item>@string/lkmprofile_medium</item>
+        <item>@string/lkmprofile_aggressive</item>
+        <item>@string/lkmprofile_veryaggressive</item>
+        <item>@string/lkmprofile_disable</item>
+    </string-array>
+    <string-array name="lkmprofile_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
 </resources>
