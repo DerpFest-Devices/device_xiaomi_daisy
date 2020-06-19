@@ -51,6 +51,7 @@
     <string name="spectrum_battery">Battery</string>
     <string name="spectrum_gaming">Gaming</string>
     <string name="spectrum_balance">Balance</string>
+    <string name="spectrum_ubattery">Ultra Battery</string>
 
     <string name="audio_title">Audio</string>
 
