@@ -286,4 +286,17 @@
     <string name="lkmprofile_verylight">Very Light</string>
     <string name="lkmprofile_default">Default</string>
     <string name="lkmprofile_disable">Disable</string>
+
+    <!-- LKM Profiles -->
+    <string name="tcpcongestion_title">TCP Congestion</string>
+    <string name="tcpcongestion_summary">Transmission Control Protocol Congestion Algorithm</string>
+    <string name="tcpcongestion_dialogTitle">Choose your TCP Congestion Algorithm</string>
+
+    <!-- Values for LKM Presets -->
+    <string name="tcpcongestion_westwood">westwood</string>
+    <string name="tcpcongestion_cubic">cubic</string>
+    <string name="tcpcongestion_reno">reno</string>
+    <string name="tcpcongestion_bic">bic</string>
+    <string name="tcpcongestion_highspeed">highspeed</string>
+    <string name="tcpcongestion_htcp">htcp</string>
 </resources>

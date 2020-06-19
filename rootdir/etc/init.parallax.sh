@@ -6,3 +6,6 @@ fi
 if [ ! -f /data/property/persist.lkm.profile ]; then
     setprop persist.lkm.profile 0
 fi
+if [ ! -f /data/property/persist.tcp.profile ]; then
+    setprop persist.tcp.profile 0
+fi

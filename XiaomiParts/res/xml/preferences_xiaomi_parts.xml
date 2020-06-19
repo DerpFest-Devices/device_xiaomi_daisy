@@ -213,6 +213,16 @@
             android:summary="@string/lkmprofile_summary"
             android:icon="@drawable/ic_lkm" 
             android:title="@string/lkmprofile_title" />
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/tcpcongestion_dialogTitle"
+            android:entries="@array/tcpcongestion_profiles"
+            android:entryValues="@array/tcpcongestion_values"
+            android:key="tcpcongestion"
+            android:summary="@string/tcpcongestion_summary"
+            android:icon="@drawable/ic_tcp" 
+            android:title="@string/tcpcongestion_title" />
     </PreferenceCategory>
 
     <PreferenceCategory

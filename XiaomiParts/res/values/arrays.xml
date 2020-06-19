@@ -233,4 +233,21 @@
         <item>5</item>
         <item>6</item>
     </string-array>
+
+    <string-array name="tcpcongestion_profiles">
+        <item>@string/tcpcongestion_westwood</item>
+        <item>@string/tcpcongestion_cubic</item>
+        <item>@string/tcpcongestion_reno</item>
+        <item>@string/tcpcongestion_bic</item>
+        <item>@string/tcpcongestion_highspeed</item>
+        <item>@string/tcpcongestion_htcp</item>
+    </string-array>
+    <string-array name="tcpcongestion_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>

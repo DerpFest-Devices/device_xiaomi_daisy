@@ -8,6 +8,7 @@ on property:sys.boot_completed=1
 # Enable cpucore support
    setprop cpucore.support 1
    setprop lkm.support 1
+   setprop tcp.support 1
 # zero
 on property:persist.cpucore.profile=0
     write /sys/devices/system/cpu/cpu0/online 1
@@ -111,3 +112,23 @@ on property:persist.lkm.profile=5
 # Disable
 on property:persist.lkm.profile=6
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
+
+# TCP 
+# westwood
+on property:persist.tcp.profile=0
+    write /proc/sys/net/ipv4/tcp_congestion_control westwood
+# cubic
+on property:persist.tcp.profile=1
+    write /proc/sys/net/ipv4/tcp_congestion_control cubic
+# reno
+on property:persist.tcp.profile=2
+    write /proc/sys/net/ipv4/tcp_congestion_control reno
+# bic
+on property:persist.tcp.profile=3
+    write /proc/sys/net/ipv4/tcp_congestion_control bic
+# highspeed
+on property:persist.tcp.profile=4
+    write /proc/sys/net/ipv4/tcp_congestion_control highspeed
+# htcp
+on property:persist.tcp.profile=5
+    write /proc/sys/net/ipv4/tcp_congestion_control htcp
