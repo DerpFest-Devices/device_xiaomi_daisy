@@ -215,6 +215,10 @@ on boot
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
 
+    # High Performance Audio
+    chown system system /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
+    chmod 0660 /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
+
     # Audio
     chown system system /sys/kernel/sound_control/headphone_gain
     chown system system /sys/kernel/sound_control/mic_gain

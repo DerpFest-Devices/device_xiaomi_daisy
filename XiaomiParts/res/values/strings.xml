@@ -54,6 +54,8 @@
     <string name="spectrum_ubattery">Ultra Battery</string>
 
     <string name="audio_title">Audio</string>
+    <string name="highperfaudio_title">Audio High Performance Mode</string>
+    <string name="highperfaudio_summary">Enable to get bettter performing audio</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Dirac Sound Enhancer</string>
