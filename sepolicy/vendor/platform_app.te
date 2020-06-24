@@ -71,3 +71,10 @@ allow platform_app bootloader_boot_reason_prop:file { open };
 allow platform_app cnd_vendor_prop:file { open };
 allow platform_app ctl_bootanim_prop:file { open };
 allow platform_app sensors_panel_prop:file { open };
+allow platform_app sensors_panel_prop:file { getattr };
+
+#Micam
+typeattribute platform_app system_executes_vendor_violators;
+
+r_dir_file(platform_app, vendor_camera_font_file)
+
