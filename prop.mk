@@ -1,5 +1,5 @@
 #
-# system.prop for msm8953-common
+# system.prop for daisy
 #
 
 # ART
@@ -16,8 +16,12 @@ audio.offload.min.duration.secs=30 \
 audio.offload.video=true \
 ro.config.media_vol_steps=25 \
 ro.config.vc_call_vol_steps=7 \
+persist.vendor.audio.fluence.speaker=true \
+persist.vendor.audio.fluence.voicecall=true \
+persist.vendor.audio.fluence.voicerec=false \
 persist.vendor.btstack.enable.splita2dp=false \
 ro.vendor.audio.sdk.ssr=false \
+ro.vendor.audio.sdk.fluencetype=fluence \
 vendor.audio.flac.sw.decoder.24bit=true \
 vendor.audio.offload.buffer.size.kb=64 \
 vendor.audio.offload.gapless.enabled=true \
@@ -44,6 +48,26 @@ bluetooth.hfp.client=1 \
 qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7 \
 ro.qualcomm.bt.hci_transport=smd
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+vidc.enc.dcvs.extra-buff-count=2 \
+media.camera.ts.monotonic=1 \
+persist.vendor.camera.display.lmax=1280x720 \
+persist.vendor.camera.display.umax=1920x108 \
+vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.whatsapp \
+vendor.camera.lowpower.record.enable=1 \
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.huaqin.factory,com.mi.AutoTest \
+vendor.camera.aux.packagelist2=com.android.systemui,com.huaqin.cameraautotest,com.huaqin.runtime \
+vendor.camera.aux.packageblacklist=com.discord \
+persist.vendor.qti.telephony.vt_cam_interface=2 \
+persist.vendor.camera.dual.camera=0 \
+persist.vendor.camera.eis.enable=1 \
+persist.vendor.camera.gyro.disable=0 \
+persist.vendor.camera.isp.clock.optmz=0 \
+persist.vendor.camera.stats.test=5 \
+persist.vendor.camera.CDS=off \
+persist.camera.HAL3.enabled=1
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -129,7 +153,6 @@ vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1 \
-vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
 vendor.video.disable.ubwc=1
 
@@ -159,10 +182,6 @@ persist.rild.nitz_short_ons_0="" \
 persist.rild.nitz_short_ons_1="" \
 persist.rild.nitz_short_ons_2="" \
 persist.rild.nitz_short_ons_3=""
-
-# Property to enable display default color mode
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.display.enable_default_color_mode=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
