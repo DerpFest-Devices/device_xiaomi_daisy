@@ -9,7 +9,6 @@ vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-
 # Camera - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
 lib64/libseemore.so
 vendor/lib/libchromaflash.so
@@ -1867,6 +1866,24 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Fingerprint firmware - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
 etc/firmware/goodix_firmware.bin
+
+# Firmware - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+vendor/firmware/fpctzapp.b00
+vendor/firmware/fpctzapp.b01
+vendor/firmware/fpctzapp.b02
+vendor/firmware/fpctzapp.b03
+vendor/firmware/fpctzapp.b04
+vendor/firmware/fpctzapp.b05
+vendor/firmware/fpctzapp.b06
+vendor/firmware/fpctzapp.mdt
+vendor/firmware/goodixfp.b00
+vendor/firmware/goodixfp.b01
+vendor/firmware/goodixfp.b02
+vendor/firmware/goodixfp.b03
+vendor/firmware/goodixfp.b04
+vendor/firmware/goodixfp.b05
+vendor/firmware/goodixfp.b06
+vendor/firmware/goodixfp.mdt
 
 # QC RIL - from LA.UM.8.6.2.r1-06600-89xx.0
 vendor/bin/hw/qcrild|da6f617f9e4645e7147cf7d41ad924e37056db97
