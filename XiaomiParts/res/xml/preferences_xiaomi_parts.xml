@@ -16,7 +16,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="torch"
         android:title="@string/torch_title">
 
@@ -69,7 +69,7 @@
             android:icon="@drawable/ic_vibrate_call"
             android:title="@string/vibration_call_strength_title" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:key="display"
@@ -266,7 +266,7 @@
 
 </PreferenceCategory>
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="chargingled"
         android:title="@string/chargingled_title">
 
@@ -276,7 +276,7 @@
             android:icon="@drawable/ic_led"
             android:title="@string/led_blinking_title" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:key="audio"

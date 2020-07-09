@@ -38,11 +38,11 @@ import com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
-import com.xiaomi.parts.preferences.LedBlinkPreference;
+/* import com.xiaomi.parts.preferences.LedBlinkPreference;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
-import com.xiaomi.parts.preferences.YellowFlashPreference;
+import com.xiaomi.parts.preferences.YellowFlashPreference; */
 import com.xiaomi.parts.SuShell;
 import com.xiaomi.parts.SuTask;
 
@@ -51,20 +51,20 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String TAG = "XiaomiParts";
 
-    public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
+    /* public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
     public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_0/max_brightness";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_1/max_brightness";
 
     public static final String PREF_CHARGING_LED = "charging_led";
-    public static final String CHARGING_LED_PATH = "/sys/class/leds/charging/max_brightness";
+    public static final String CHARGING_LED_PATH = "/sys/class/leds/charging/max_brightness"; */
 
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
-    public static final String KEY_VIBSTRENGTH = "vib_strength";    
+    /* public static final String KEY_VIBSTRENGTH = "vib_strength";    
     public static final String KEY_CALL_VIBSTRENGTH = "vib_call_strength";
-    public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength";
+    public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength"; */
     
     public static final String CATEGORY_DISPLAY = "display";
     public static final String PREF_DEVICE_KCAL = "device_kcal";
@@ -90,7 +90,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String PREF_MSM_TOUCHBOOST = "touchboost";
     public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
-    public static final String KEY_FLASH = "yellow_flash";
+    /* public static final String KEY_FLASH = "yellow_flash"; */
 
     public static final String HIGH_PERF_AUDIO = "highperfaudio";
     public static final String HIGH_AUDIO_PATH = "/sys/module/snd_soc_wcd9330/parameters/high_perf_mode";
@@ -120,10 +120,10 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String CAMERA_CATEGORY = "camera";
     private static final String PREF_CAMERA_MODE = "camera_mode";
 
-    private CustomSeekBarPreference mWhiteTorchBrightness;
+    /* private CustomSeekBarPreference mWhiteTorchBrightness;
     private CustomSeekBarPreference mYellowTorchBrightness;
     private LedBlinkPreference mLedBlink;
-    private YellowFlashPreference mYellowFlash;
+    private YellowFlashPreference mYellowFlash; */
     private SecureSettingSwitchPreference mHighAudio;
     private SecureSettingSwitchPreference mMsmThermal;
     private SecureSettingSwitchPreference mCoreControl;
@@ -131,9 +131,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mCPUCORE;
     private SecureSettingListPreference mLKM;
     private SecureSettingListPreference mTCP;
-    private VibratorStrengthPreference mVibratorStrength;
+    /* private VibratorStrengthPreference mVibratorStrength;
     private VibratorCallStrengthPreference mVibratorCallStrength;
-    private VibratorNotifStrengthPreference mVibratorNotifStrength;
+    private VibratorNotifStrengthPreference mVibratorNotifStrength; */
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
     private Preference mAmbientPref;
@@ -162,13 +162,13 @@ public class DeviceSettings extends PreferenceFragment implements
 
         String device = FileUtils.getStringProp("ro.build.product", "unknown");
 
-        mWhiteTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_WHITE_TORCH_BRIGHTNESS);
+        /* mWhiteTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_WHITE_TORCH_BRIGHTNESS);
         mWhiteTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH));
         mWhiteTorchBrightness.setOnPreferenceChangeListener(this);
 
         mYellowTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_YELLOW_TORCH_BRIGHTNESS);
         mYellowTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
-        mYellowTorchBrightness.setOnPreferenceChangeListener(this);
+        mYellowTorchBrightness.setOnPreferenceChangeListener(this); */
 
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
 
@@ -204,7 +204,7 @@ public class DeviceSettings extends PreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(PREF_BACKLIGHT_DIMMER));
         }
 
-	mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
+	/* mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null)
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         mVibratorCallStrength = (VibratorCallStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
@@ -212,7 +212,7 @@ public class DeviceSettings extends PreferenceFragment implements
             mVibratorCallStrength.setEnabled(VibratorCallStrengthPreference.isSupported());
         mVibratorNotifStrength = (VibratorNotifStrengthPreference) findPreference(KEY_NOTIF_VIBSTRENGTH);
         if (mVibratorNotifStrength != null)
-            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported());
+            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported()); */
 
         boolean enhancerEnabled;
         try {
@@ -286,10 +286,10 @@ public class DeviceSettings extends PreferenceFragment implements
         mCPUBOOST.setSummary(mCPUBOOST.getEntry());
         mCPUBOOST.setOnPreferenceChangeListener(this);
 
-        mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
+        /* mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
         if (mYellowFlash != null) {
             mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
-        }
+        } */
 
         if (FileUtils.fileWritable(MSM_THERMAL_PATH)) {
             mMsmThermal = (SecureSettingSwitchPreference) findPreference(PERF_MSM_THERMAL);
@@ -330,10 +330,10 @@ public class DeviceSettings extends PreferenceFragment implements
         mTCP.setSummary(mTCP.getEntry());
         mTCP.setOnPreferenceChangeListener(this);
 
-        mLedBlink = (LedBlinkPreference) findPreference(PREF_CHARGING_LED);
+        /* mLedBlink = (LedBlinkPreference) findPreference(PREF_CHARGING_LED);
         if (mLedBlink != null) {
             mLedBlink.setEnabled(LedBlinkPreference.isSupported());
-        }
+        } */
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
@@ -363,13 +363,13 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case KEY_WHITE_TORCH_BRIGHTNESS:
+            /* case KEY_WHITE_TORCH_BRIGHTNESS:
                 FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
                 break;
 
             case KEY_YELLOW_TORCH_BRIGHTNESS:
                 FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
-                break;
+                break; */
 
             case PERF_MSM_THERMAL:
                 FileUtils.setValue(MSM_THERMAL_PATH, (boolean) value);
