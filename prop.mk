@@ -50,6 +50,18 @@ qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7 \
 ro.qualcomm.bt.hci_transport=smd
 
+# CAF props
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.memperf.enable=false \
+ro.memperf.lib=libmemperf.so \
+ro.vendor.qti.config.zram=true \
+ro.vendor.qti.sys.fw.empty_app_percent=50 \
+ro.vendor.qti.sys.fw.trim_cache_percent=100 \
+ro.vendor.qti.sys.fw.trim_empty_percent=100 \
+ro.vendor.qti.sys.fw.trim_enable_memory=2147483648 \
+ro.vendor.qti.sys.fw.use_trim_settings=true \
+vendor.vidc.enc.disable.pq=true
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 vidc.enc.dcvs.extra-buff-count=2 \
