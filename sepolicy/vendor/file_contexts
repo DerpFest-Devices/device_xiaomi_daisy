@@ -1,0 +1,136 @@
+# Audio
+#/data/vendor/misc/audio(/.*)?                   u:object_r:vendor_audio_data_file:s0
+
+# Avb
+/avb(/.*)?               u:object_r:avb_file:s0
+
+# Block devices
+/dev/block/mmcblk0p26				u:object_r:persist_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/aboot             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cmnlib             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cmnlib64             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/devcfg             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/dsp             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/keymaster             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/lksecapp             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/rpm             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/sbl1             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/tz             u:object_r:custom_ab_block_device:s0
+
+# Bt_Firmware
+/bt_firmware(/.*)?                            u:object_r:bt_firmware_file:s0
+
+# Mlipay
+/vendor/bin/mlipayd@1\.1             u:object_r:hal_mlipay_default_exec:s0
+
+# Camera
+/data/vendor/qcam(/.*)?                         u:object_r:camera_socket:s0
+
+# Firmware (Root folders)
+/firmware(/.*)?          u:object_r:firmware_file:s0
+
+# Fpc Fingerprint
+/data/fpc(/.*)?					u:object_r:fpc_data_file:s0
+/dev/socket/fpce(/.*)?				u:object_r:fpce_socket:s0
+/sys/devices/soc/soc:fpc1020(/.*)?		u:object_r:fpc_sysfs:s0
+
+# Glove Mode
+/sys/class/tp_glove/device(/.*)?		u:object_r:proc_touchpanel:s0
+/sys/devices/virtual/tp_glove(/.*)?		u:object_r:proc_touchpanel:s0
+
+# Goodix Fingerprint
+/dev/goodix_fp					u:object_r:gx_fpd_device:s0
+/data/gf_data(/.*)?                             u:object_r:gx_fpd_data_file:s0
+/persist/data/gxfp(/.*)?			u:object_r:gx_fpd_data_file:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey					u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.widevine					u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.daisy						u:object_r:hal_light_default_exec:s0
+
+# Input files
+/(vendor|system/vendor)/usr/idc(/.*)?		u:object_r:idc_file:s0
+/(vendor|system/vendor)/usr/keylayout(/.*)?	u:object_r:keylayout_file:s0
+
+# Ir
+/dev/peel_ir					u:object_r:lirc_device:s0
+
+# Location
+/data/vendor/location/xtra/socket_hal_xtra    u:object_r:location_socket:s0
+
+# Rild
+/(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
+
+# Shell Script
+/(vendor|system/vendor)/bin/init\.goodix\.sh    u:object_r:init_fingerprint_exec:s0
+
+# Sys files
+/sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?		u:object_r:sysfs_leds:s0
+/sys/devices/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/disable_keys            u:object_r:proc_touchpanel:s0
+/sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?				u:object_r:sysfs_leds:s0
+/sys/devices/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/enable_dt2w		u:object_r:proc_touchpanel:s0
+
+# USB
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.xiaomi_8996       u:object_r:hal_usb_default_exec:s0
+
+# Power HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.daisy u:object_r:hal_power_default_exec:s0
+
+# IOp
+/(vendor|system/vendor)/lib(64)?/vendor\.qti\.hardware\.iop@1\.0\.so    u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/vendor\.qti\.hardware\.iop@2\.0\.so    u:object_r:same_process_hal_file:s0
+
+# FPS Info
+/sys/devices/virtual/graphics/fb0/measured_fps           u:object_r:sysfs_fps:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?         u:object_r:kcal_dev:s0
+/sys/bus/platform/drivers/kcal_ctrl(/.*)?       u:object_r:kcal_dev:s0
+/sys/kernel/sound_control/headphone_gain                     u:object_r:sysfs_headgain:s0
+/sys/kernel/sound_control/mic_gain                           u:object_r:sysfs_micgain:s0
+/sys/kernel/fast_charge/force_fast_charge                    u:object_r:sysfs_fastcharge:s0
+
+# Backlight
+/sys/module/mdss_fb/parameters/backlight_dimmer                               u:object_r:sysfs_backlight:s0
+
+# Torch brightness control
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness            u:object_r:sysfs_tbrightness:s0
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness            u:object_r:sysfs_tbrightness:s0
+/sys/class/leds/led:torch_0/max_brightness            u:object_r:sysfs_tbrightness:s0
+/sys/class/leds/led:torch_1/max_brightness            u:object_r:sysfs_tbrightness:s0
+
+/sys/devices/soc/leds-atc-25/driver/leds-atc-25/leds/charging/max_brightness		u:object_r:sysfs_chargeled:s0
+/sys/devices/platform/soc/soc:qcom,camera-flash/leds/torch-light1/max_brightness		u:object_r:sysfs_yintensity:s0
+
+# Vibration
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator(/.*)?           u:object_r:sysfs_vibrator:s0
+/sys/class/timed_output/vibrator/vmax_mv             u:object_r:sysfs_vibrator:s0
+/sys/class/timed_output/vibrator/vtg_level           u:object_r:sysfs_vibrator:s0
+
+# Touchboost
+/sys/module/msm_performance/parameters/touchboost		u:object_r:sysfs_touchboost:s0
+
+# Dolby
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
+
+# High Performance audio
+/sys/module/snd_soc_wcd9330/parameters/high_perf_mode		u:object_r:sysfs_highperfaudio:s0
+
+# msm thermal
+/sys/module/msm_thermal/core_control/enabled		u:object_r:sysfs_corecontrol:s0
+/sys/module/msm_thermal/parameters/enabled		u:object_r:sysfs_msmthermal:s0
+/sys/module/msm_thermal/vdd_restriction/enabled		u:object_r:sysfs_vddrestrict:s0
+
+# Hexagon DSP-side executable needed for Halide operation
+# This is labeled as public_adsprpcd_file as it needs to be read by apps
+# (e.g. Google Camera App)
+/mnt/vendor/dsp/fastrpc_shell_3                                               u:object_r:public_adsprpcd_file:s0
+
+# FB for PowerHAL
+/sys/devices/virtual/graphics/fb0/idle_state                  u:object_r:sysfs_graphics:s0
+
+# Cryptfshw
+/(product|system/product)/lib(64)?/vendor\.qti\.hardware\.cryptfshw@1\.0\.so	u:object_r:same_process_hal_file:s0
+
+# Product Libs
+/(product|system/product)/lib(64)?(/.*)?	u:object_r:system_lib_file:s0

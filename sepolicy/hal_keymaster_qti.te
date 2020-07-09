@@ -1,1 +1,0 @@
-allow hal_keymaster_qti same_process_hal_file:file  { execute getattr open read };

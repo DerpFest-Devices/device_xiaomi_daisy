@@ -1,2 +1,0 @@
-type goodix_fp_hwservice, hwservice_manager_type;
-type hal_slmadapter_hwservice, hwservice_manager_type;

@@ -1,2 +1,0 @@
-allow fsck tmpfs:blk_file { getattr };
-allow fsck fsck:capability { sys_admin };

@@ -1,0 +1,103 @@
+allow system_app init:binder call;
+allow system_app bootloader_boot_reason_prop:file read;
+allow system_app boottime_prop:file read;
+allow system_app cnd_vendor_prop:file read;
+allow system_app fs_bpf:dir search;
+allow system_app ctl_bootanim_prop:file { read };
+allow system_app ctl_console_prop:file { read };
+allow system_app ctl_fuse_prop:file { read };
+allow system_app ctl_interface_restart_prop:file { read };
+allow system_app ctl_interface_start_prop:file { read };
+allow system_app ctl_interface_stop_prop:file { read };
+allow system_app ctl_mdnsd_prop:file { read };
+allow system_app ctl_qcrild_prop:file { read };
+allow system_app ctl_restart_prop:file { read };
+allow system_app proc_pagetypeinfo:file { getattr open read };
+allow system_app sysfs_zram:dir { search };
+allow system_app sysfs_zram:file { getattr open read };
+allow system_app sysfs_thermal:file { write };
+allow system_app sysfs_kgsl:lnk_file read;
+allow system_app fm_prop:property_service set;
+allow system_app persist_camera_prop:file { read };
+allow system_app persist_camera_prop:file { open };
+allow system_app apex_service:service_manager { find };
+allow system_app persist_camera_prop:file { getattr };
+allow system_app system_data_file:dir { write add_name };
+allow system_app sysfs:file { write };
+allow system_app sysfs:file { open };
+allow system_app sysfs:file { getattr };
+allow system_app sysfs:file { read };
+allow system_app system_data_file:dir { create };
+allow system_app system_data_file:dir { setattr };
+allow system_app system_data_file:file { create };
+allow system_app camera_prop:property_service set;
+get_prop(system_app, camera_prop);
+allow system_app apexd:binder { call };
+allow system_app wificond:binder { call };
+allow system_app hal_power_stats_default:binder { call };
+allow system_app sysfs_vibrator:file rw_file_perms;
+allow system_app sysfs_vibrator:dir r_dir_perms;
+allow system_app sysfs_graphics:dir search;
+allow system_app sysfs_graphics:file { rw_file_perms };
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { open read getattr };
+
+# XiaomiParts
+allow system_app kcal_dev:file rw_file_perms;
+allow system_app kcal_dev:dir search;
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file { read write };
+allow system_app sysfs_vibrator:file open;
+allow system_app sysfs_vibrator:file getattr;
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
+allow system_app sysfs_backlight:file { open read getattr write };
+allow system_app sysfs_egain:file { open read getattr write };
+allow system_app sysfs_hgain:file { open read getattr write };
+allow system_app sysfs_headgain:dir search;
+allow system_app sysfs_headgain:file rw_file_perms;
+allow system_app sysfs_mgain:file { open read getattr write };
+allow system_app sysfs_micgain:dir search;
+allow system_app sysfs_micgain:file rw_file_perms;
+allow system_app sysfs_sgain:file { open read getattr write };
+allow system_app sysfs_sgain:dir search;
+allow system_app sysfs_sgain:file rw_file_perms;
+allow system_app sysfs_fcharge:file { open read getattr write };
+allow system_app sysfs_tbrightness:file { open getattr write };
+allow system_app sysfs_fps:file rw_file_perms;
+allow system_app sysfs_torch:dir search;
+allow system_app sysfs_torch:file rw_file_perms;
+allow system_app sysfs_leds:dir { search };
+allow system_app sysfs_chargeled:file { open read getattr write };
+allow system_app sysfs_yintensity:file { open getattr write };
+allow system_app sysfs_fastcharge:file { open read getattr write };
+allow system_app sysfs_touchboost:file { open read getattr write };
+allow system_app gpuboost_prop:property_service set;
+get_prop(system_app, gpuboost_prop);
+allow system_app cpuboost_prop:property_service set;
+get_prop(system_app, cpuboost_prop);
+
+allow system_app sysfs_highperfaudio:file { open read getattr write };
+
+# allow system apps to read battery status
+r_dir_file(system_app, sysfs_battery_supply)
+
+allow system_app sysfs_msmthermal:file { open read getattr write };
+allow system_app sysfs_corecontrol:file { open read getattr write };
+allow system_app sysfs_vddrestrict:file { open read getattr write };
+allow system_app cpucore_prop:property_service set;
+get_prop(system_app, cpucore_prop);
+allow system_app lkm_prop:property_service set;
+get_prop(system_app, lkm_prop);
+allow system_app tcp_prop:property_service set;
+get_prop(system_app, tcp_prop);
+
+allow system_app sysfs_leds:file { write };
+allow system_app sysfs_leds:file { open };
+allow system_app sysfs_leds:file { getattr };
+allow system_app sysfs_msm_perf:dir { search };
+allow system_app sysfs_kgsl:dir { search };
+allow system_app selinuxfs:file { read };
+
+# zram
+r_dir_file(system_app sysfs_zram)

@@ -1,0 +1,56 @@
+allow platform_app bluetooth_prop:file read;
+allow platform_app bootloader_boot_reason_prop:file read;
+allow platform_app boottime_prop:file read;
+allow platform_app cnd_vendor_prop:file read;
+allow platform_app ctl_bootanim_prop:file { read };
+allow platform_app ctl_bugreport_prop:file { read };
+allow platform_app ctl_console_prop:file { read };
+allow platform_app ctl_default_prop:file { read };
+allow platform_app ctl_dumpstate_prop:file { read };
+allow platform_app ctl_fuse_prop:file { read };
+allow platform_app ctl_interface_restart_prop:file { read };
+allow platform_app ctl_interface_start_prop:file { read };
+allow platform_app ctl_interface_stop_prop:file { read };
+allow platform_app fs_bpf:dir search;
+allow platform_app sysfs_kgsl:dir search;
+allow platform_app sysfs_kgsl:file { getattr open read };
+allow platform_app time_daemon:unix_stream_socket connectto;
+allow platform_app vendor_file:file { getattr open read };
+allow platform_app time_daemon:file { read };
+allow platform_app system_file:file { read };
+allow platform_app system_file:file { getattr };
+allow platform_app vendor_display_prop:file { read };
+allow platform_app vendor_default_prop:file { read open getattr map };
+allow platform_app radio_data_file:dir { getattr };
+allow platform_app app_data_file:file execute;
+allow platform_app sysfs:dir { open read };
+allow platform_app sysfs_switch:dir search;
+allow platform_app sysfs_net:dir { search };
+allow platform_app proc_version:file { read open };
+allow platform_app shell_data_file:dir { getattr };
+allow platform_app proc_net_tcp_udp:file { read open getattr };
+allow platform_app sysfs:file { read };
+allow platform_app sysfs:file { open };
+allow platform_app sysfs:file { getattr };
+allow platform_app sysfs_usermodehelper:file { getattr };
+allow platform_app sysfs_fs_ext4_features:dir { read };
+allow platform_app pstorefs:dir { read };
+allow platform_app sysfs_dt_firmware_android:dir { read };
+allow platform_app sysfs_wakeup_reasons:dir { read };
+allow platform_app sysfs_slpi:dir { read };
+allow platform_app spectrum_prop:property_service { set };
+allow platform_app spectrum_prop:file { read open getattr };
+
+# Face Unlock
+get_prop(platform_app, camera_prop)
+
+allow platform_app boottime_prop:file { open getattr };
+allow platform_app sysfs_battery_supply:dir { search };
+allow platform_app sysfs_battery_supply:file { open read getattr };
+allow platform_app sysfs_fps:file { getattr open read };
+allow platform_app sysfs_leds:dir search;
+allow platform_app hal_dms_hwservice:hwservice_manager find;
+allow platform_app hal_dms_default:binder { call transfer };
+allow platform_app sysfs_kgsl:lnk_file read;
+allow platform_app vendor_display_prop:file { getattr };
+allow platform_app system_app_data_file:dir { getattr };
