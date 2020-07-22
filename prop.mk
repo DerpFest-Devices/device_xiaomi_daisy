@@ -255,6 +255,7 @@ persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
+persist.vendor.radio.aosp_usr_pref_sel=true \
 persist.radio.multisim.config=dsds \
 persist.vendor.radio.add_power_save=1 \
 persist.radio.VT_ENABLE=1 \
