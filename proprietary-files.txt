@@ -1906,3 +1906,20 @@ vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Support for all Controllers
+system/usr/keylayout/Vendor_045e_Product_028e.kl|b71f13883eec5b516a58b3359b4d7844bfe4227a
+system/usr/keylayout/Vendor_045e_Product_028f.kl|1b3ec75d0f80f47cd1c656e3677679d794a1b130
+system/usr/keylayout/Vendor_045e_Product_0291.kl|1b3ec75d0f80f47cd1c656e3677679d794a1b130
+system/usr/keylayout/Vendor_045e_Product_02a1.kl|cabd7fa3061663eff657d7e2a5d49fd81cfcb7da
+system/usr/keylayout/Vendor_045e_Product_02d1.kl|5deee15d9dc83b2de4c11ec48884c43f1a385da9
+system/usr/keylayout/Vendor_045e_Product_02e0.kl|4fb717b2f0e7db8e88563c71d65e5426c2faf598
+system/usr/keylayout/Vendor_045e_Product_02e3.kl|008267e575ebe4a572541553a6a4c1f8bbdc0511
+system/usr/keylayout/Vendor_045e_Product_02e6.kl|8c2c93cdd60772442461c3c46279e4f417a5c279
+system/usr/keylayout/Vendor_045e_Product_02fd.kl|7968acdfac3c27cf07f3d08bd11adcfff50e64a4
+system/usr/keylayout/Vendor_045e_Product_0719.kl|797b87e2bbe114f231e21ac8824c7aba6328d189
+system/usr/keylayout/Vendor_054c_Product_0268.kl|5bed7fbe9dcc835672b20f363c167d57673238c3
+system/usr/keylayout/Vendor_054c_Product_05c4.kl|30d6f80f55224b61d21e524cb76392a0fd333abd
+system/usr/keylayout/Vendor_054c_Product_09cc.kl|30d6f80f55224b61d21e524cb76392a0fd333abd
+system/usr/keylayout/Vendor_057e_Product_2009.kl|27619a164b58d2bb539dd5808ecde992802a7456
+system/usr/keylayout/Vendor_146b_Product_0d01.kl|386aee6b21c249d23d80cb82889099ef043cc40e
