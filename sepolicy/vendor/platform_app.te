@@ -70,3 +70,4 @@ allow platform_app ctl_bugreport_prop:file { open };
 allow platform_app bootloader_boot_reason_prop:file { open };
 allow platform_app cnd_vendor_prop:file { open };
 allow platform_app ctl_bootanim_prop:file { open };
+allow platform_app sensors_panel_prop:file { open };

@@ -21,3 +21,5 @@ allow ueventd vfat:file { getattr };
 allow ueventd ueventd:capability { sys_admin };
 
 typeattribute ueventd data_between_core_and_vendor_violators;
+
+allow ueventd ueventd:capability { sys_nice };

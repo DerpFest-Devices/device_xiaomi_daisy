@@ -8,3 +8,4 @@ allow thermal-engine thermal_prop:property_service { set };
 allow thermal-engine thermal-engine:capability { kill };
 allow thermal-engine thermal-engine:capability { sys_admin };
 r_dir_file(thermal-engine, sysfs)
+allow thermal-engine thermal_prop:file { read };
