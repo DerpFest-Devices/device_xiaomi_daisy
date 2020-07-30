@@ -116,6 +116,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         if (sharedpreferences.contains(PREF_CAMERA_MODE)){
                     try {
                         SuShell.runWithSuCheck("setprop persist.vendor.camera.HAL3.enabled 1");
+                        SuShell.runWithSuCheck("stop vendor.camera-provider-2-4 && stop cameraserver && start vendor.camera-provider-2-4 && start cameraserver");
                         showToast(context.getString(R.string.camera_hal3_toast_title),
                                 context);
                     } catch (SuShell.SuDeniedException e) {
@@ -128,6 +129,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                 if (sharedpreferences.contains(PREF_CAMERA_MODE)){
                     try {
                         SuShell.runWithSuCheck("setprop persist.vendor.camera.HAL3.enabled 0");
+                        SuShell.runWithSuCheck("stop vendor.camera-provider-2-4 && stop cameraserver && start vendor.camera-provider-2-4 && start cameraserver");
                         showToast(context.getString(R.string.camera_hal1_toast_title),
                                 context);
                     } catch (SuShell.SuDeniedException e) {
