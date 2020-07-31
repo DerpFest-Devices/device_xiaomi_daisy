@@ -226,6 +226,24 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="cam"
+        android:title="@string/camera_category">
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:summary="@string/camera_explanation_summary"
+            android:key="camera"
+            android:title="@string/camera_title"
+            android:summaryOn="@string/camera_hal3_summary"
+            android:summaryOff="@string/camera_hal1_summary"
+            android:icon="@drawable/ic_cam"
+            android:defaultValue="0"
+            android:dialogTitle="@string/camera_dialogTitle"
+            android:entries="@array/camera_profiles"
+            android:entryValues="@array/camera_values" />
+
+</PreferenceCategory>
+
+    <PreferenceCategory
     android:key="selinux"
     android:title="@string/selinux_category">
 
