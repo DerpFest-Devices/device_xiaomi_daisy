@@ -310,14 +310,4 @@
     <string name="selinux_persistence_summary">Restore the above set sepolicy mode on each boot</string>
     <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
     <string name="selinux_enforcing_toast_title">Selinux set to enforcing!</string>
-
-    <!-- HAL3 | HAL1 Switch button -->
-    <string name="camera_category">Camera</string>
-    <string name="camera_explanation_summary">HAL3 | HAL1 Switch button.</string>
-    <string name="camera_mode_title">Camera Mode</string>
-    <string name="camera_hal1_summary">HAL1</string>
-    <string name="camera_hal3_summary">HAL3</string>
-    <string name="camera_hal1_toast_title">Selinux set to Hal1!</string>
-    <string name="camera_hal3_toast_title">Selinux set to Hal3!</string>
-
 </resources>

@@ -249,23 +249,6 @@
 
 </PreferenceCategory>
 
-    <PreferenceCategory
-    android:key="camera"
-    android:title="@string/camera_category">
-
-    <Preference
-        android:summary="@string/camera_explanation_summary"
-        android:selectable="false"/>
-
-    <SwitchPreference
-        android:key="camera_mode"
-        android:title="@string/camera_mode_title"
-        android:summaryOn="@string/camera_hal3_summary"
-        android:summaryOff="@string/camera_hal1_summary"
-        android:icon="@drawable/ic_cam" />
-
-</PreferenceCategory>
-
     <!-- <PreferenceCategory
         android:key="chargingled"
         android:title="@string/chargingled_title">

@@ -45,7 +45,6 @@ import java.util.List;
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
     private static final String PREF_SELINUX_MODE = "selinux_mode";
-    private static final String PREF_CAMERA_MODE = "camera_mode";
 
     private Context settingsContext = null;
     private static final String TAG = "SettingsOnBoot";
@@ -105,42 +104,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             }
         }
     }
-    if(!mSetupRunning) {
-        try {
-            settingsContext = context.createPackageContext("com.android.settings", 0);
-        } catch (Exception e) {
-            Log.e(TAG, "Package not found", e);
-        }
-        SharedPreferences sharedpreferences = context.getSharedPreferences("selinux_pref",
-                Context.MODE_PRIVATE);
-        if (sharedpreferences.contains(PREF_CAMERA_MODE)){
-                    try {
-                        SuShell.runWithSuCheck("setprop persist.vendor.camera.HAL3.enabled 1");
-                        SuShell.runWithSuCheck("stop vendor.camera-provider-2-4 && stop cameraserver && start vendor.camera-provider-2-4 && start cameraserver");
-                        showToast(context.getString(R.string.camera_hal3_toast_title),
-                                context);
-                    } catch (SuShell.SuDeniedException e) {
-                        showToast(context.getString(R.string.cannot_get_su), context);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }                
-              else {
-                if (sharedpreferences.contains(PREF_CAMERA_MODE)){
-                    try {
-                        SuShell.runWithSuCheck("setprop persist.vendor.camera.HAL3.enabled 0");
-                        SuShell.runWithSuCheck("stop vendor.camera-provider-2-4 && stop cameraserver && start vendor.camera-provider-2-4 && start cameraserver");
-                        showToast(context.getString(R.string.camera_hal1_toast_title),
-                                context);
-                    } catch (SuShell.SuDeniedException e) {
-                        showToast(context.getString(R.string.cannot_get_su), context);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-    
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 

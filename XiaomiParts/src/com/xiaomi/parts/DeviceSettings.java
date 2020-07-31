@@ -117,9 +117,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
 
-    private static final String CAMERA_CATEGORY = "camera";
-    private static final String PREF_CAMERA_MODE = "camera_mode";
-
     /* private CustomSeekBarPreference mWhiteTorchBrightness;
     private CustomSeekBarPreference mYellowTorchBrightness;
     private LedBlinkPreference mLedBlink;
@@ -149,10 +146,10 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mTouchboost;
     private SecureSettingListPreference mGPUBOOST;
     private SecureSettingListPreference mCPUBOOST;
+
     private static Context mContext;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
-    private SwitchPreference mCameraMode;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -204,7 +201,7 @@ public class DeviceSettings extends PreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(PREF_BACKLIGHT_DIMMER));
         }
 
-	/* mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
+    /* mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null)
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         mVibratorCallStrength = (VibratorCallStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
@@ -351,11 +348,6 @@ public class DeviceSettings extends PreferenceFragment implements
         mSelinuxPersistence.setChecked(getContext()
         .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
         .contains(PREF_SELINUX_MODE));
-
-        // HAL3 | HAL1 Switch button
-        Preference cameraCategory = findPreference(CAMERA_CATEGORY);
-        mCameraMode = (SwitchPreference) findPreference(PREF_CAMERA_MODE);
-        mCameraMode.setOnPreferenceChangeListener(this);
         }
 
 
@@ -478,13 +470,6 @@ public class DeviceSettings extends PreferenceFragment implements
                 }
                 break;
 
-            case PREF_CAMERA_MODE:
-                  if (preference == mCameraMode) {
-                    boolean enabled = (Boolean) value;
-                    new SwitchCameraTask(getActivity()).execute(enabled);
-                }
-                break;
-
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
@@ -535,26 +520,6 @@ public class DeviceSettings extends PreferenceFragment implements
             if (!result) {
               // Did not work, so restore actual value
               setSelinuxEnabled(SELinux.isSELinuxEnforced(), mSelinuxPersistence.isChecked());
-            }
-          }
-        }
-
-        private class SwitchCameraTask extends SuTask<Boolean> {
-          public SwitchCameraTask(Context context) {
-            super(context);
-          }
-          @Override
-          protected void sudoInBackground(Boolean... params) throws SuShell.SuDeniedException {
-            if (params.length != 1) {
-              Log.e(TAG, "SwitchCAMERATask: invalid params count");
-              return;
-            }
-            if (params[0]) {
-              SuShell.runWithSuCheck("setprop persist.vendor.camera.HAL3.enabled 1");
-              SuShell.runWithSuCheck("stop vendor.camera-provider-2-4 && stop cameraserver && start vendor.camera-provider-2-4 && start cameraserver");
-            } else {
-              SuShell.runWithSuCheck("setprop persist.vendor.camera.HAL3.enabled 0");
-              SuShell.runWithSuCheck("stop vendor.camera-provider-2-4 && stop cameraserver && start vendor.camera-provider-2-4 && start cameraserver");
             }
           }
         }
