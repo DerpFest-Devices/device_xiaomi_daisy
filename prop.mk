@@ -162,6 +162,20 @@ debug.sf.early.app.duration=16500000 \
 debug.sf.earlyGl.sf.duration=13500000 \
 debug.sf.earlyGl.app.duration=21000000
 
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.lmk.low=1001 \
+ro.lmk.medium=800 \
+ro.lmk.critical=0 \
+ro.lmk.critical_upgrade=false \
+ro.lmk.upgrade_pressure=100 \
+ro.lmk.downgrade_pressure=100 \
+ro.lmk.kill_heaviest_task=true\
+ro.lmk.kill_timeout_ms=100 \
+ro.lmk.use_minfree_levels=true \
+ro.lmk.log_stats=true \
+ro.lmk.use_psi=false
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
