@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_daisy.mk
+    $(LOCAL_DIR)/bootleg_daisy.mk
+
+COMMON_LUNCH_CHOICES := \
+    bootleg_daisy-user \
+    bootleg_daisy-userdebug \
+    bootleg_daisy-eng
