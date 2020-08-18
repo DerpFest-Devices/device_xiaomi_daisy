@@ -21,18 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common Bootleggers Rom stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+# Inherit some common DerpFest Rom stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Inherit some VendorExtra stuff
  $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk
 
 # Bootanimation
-TARGET_BOOT_ANIMATION_RES := 2280*1080
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := bootleg_daisy
+PRODUCT_NAME := derp_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
