@@ -25,7 +25,7 @@ $(call inherit-product, device/xiaomi/daisy/device.mk)
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Inherit some VendorExtra stuff
-$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
