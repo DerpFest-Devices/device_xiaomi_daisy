@@ -33,6 +33,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Adding Derp stuffs
 IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
+DERP_BUILDTYPE := Official
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
