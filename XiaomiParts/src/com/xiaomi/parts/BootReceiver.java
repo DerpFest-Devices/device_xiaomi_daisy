@@ -28,11 +28,11 @@ import android.os.SELinux;
 import android.util.Log;
 import android.widget.Toast;
 import android.text.TextUtils;
-/* import com.xiaomi.parts.preferences.LedBlinkPreference;
+/* import com.xiaomi.parts.preferences.LedBlinkPreference; */
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
-import com.xiaomi.parts.preferences.YellowFlashPreference;  */
+/* import com.xiaomi.parts.preferences.YellowFlashPreference;  */
 
 import com.xiaomi.parts.R;
 
@@ -134,11 +134,11 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
-            /* LedBlinkPreference.restore(context);
+            /* LedBlinkPreference.restore(context); */
             VibratorStrengthPreference.restore(context);
-	    VibratorCallStrengthPreference.restore(context);
-	    VibratorNotifStrengthPreference.restore(context);
-            YellowFlashPreference.restore(context); */
+	        VibratorCallStrengthPreference.restore(context);
+            VibratorNotifStrengthPreference.restore(context);
+            /* YellowFlashPreference.restore(context); */
         }
 
         /* FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,

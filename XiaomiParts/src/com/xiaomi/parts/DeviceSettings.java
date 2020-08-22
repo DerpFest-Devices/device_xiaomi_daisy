@@ -38,11 +38,11 @@ import com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
-/* import com.xiaomi.parts.preferences.LedBlinkPreference;
+/* import com.xiaomi.parts.preferences.LedBlinkPreference; */
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
-import com.xiaomi.parts.preferences.YellowFlashPreference; */
+/* import com.xiaomi.parts.preferences.YellowFlashPreference; */
 import com.xiaomi.parts.SuShell;
 import com.xiaomi.parts.SuTask;
 
@@ -131,9 +131,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mCPUCORE;
     private SecureSettingListPreference mLKM;
     private SecureSettingListPreference mTCP;
-    /* private VibratorStrengthPreference mVibratorStrength;
+    private VibratorStrengthPreference mVibratorStrength;
     private VibratorCallStrengthPreference mVibratorCallStrength;
-    private VibratorNotifStrengthPreference mVibratorNotifStrength; */
+    private VibratorNotifStrengthPreference mVibratorNotifStrength;
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
     private Preference mAmbientPref;
@@ -205,7 +205,7 @@ public class DeviceSettings extends PreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(PREF_BACKLIGHT_DIMMER));
         }
 
-	 /* mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
+	    mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null)
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         mVibratorCallStrength = (VibratorCallStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
@@ -213,7 +213,7 @@ public class DeviceSettings extends PreferenceFragment implements
             mVibratorCallStrength.setEnabled(VibratorCallStrengthPreference.isSupported());
         mVibratorNotifStrength = (VibratorNotifStrengthPreference) findPreference(KEY_NOTIF_VIBSTRENGTH);
         if (mVibratorNotifStrength != null)
-            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported()); */
+            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported());
 
         boolean enhancerEnabled;
         try {
