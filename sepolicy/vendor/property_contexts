@@ -66,3 +66,6 @@ persist.tcp.profile		   u:object_r:tcp_prop:s0
 
 # Dolby
 persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0
+
+# HAL3 | HAL1 Switch
+persist.camera.profile										u:object_r:camera_prop:s0
