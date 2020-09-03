@@ -132,3 +132,24 @@ on property:persist.tcp.profile=4
 # htcp
 on property:persist.tcp.profile=5
     write /proc/sys/net/ipv4/tcp_congestion_control htcp
+# bbr
+on property:persist.tcp.profile=6
+    write /proc/sys/net/ipv4/tcp_congestion_control bbr
+# cdg
+on property:persist.tcp.profile=7
+    write /proc/sys/net/ipv4/tcp_congestion_control cdg
+# dctcp
+on property:persist.tcp.profile=8
+    write /proc/sys/net/ipv4/tcp_congestion_control dctcp
+# hybla
+on property:persist.tcp.profile=9
+    write /proc/sys/net/ipv4/tcp_congestion_control hybla
+# vegas
+on property:persist.tcp.profile=10
+    write /proc/sys/net/ipv4/tcp_congestion_control vegas
+# nv
+on property:persist.tcp.profile=11
+    write /proc/sys/net/ipv4/tcp_congestion_control nv
+# ip
+on property:persist.tcp.profile=12
+    write /proc/sys/net/ipv4/tcp_congestion_control ip

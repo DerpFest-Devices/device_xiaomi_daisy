@@ -250,6 +250,13 @@
         <item>@string/tcpcongestion_bic</item>
         <item>@string/tcpcongestion_highspeed</item>
         <item>@string/tcpcongestion_htcp</item>
+        <item>@string/tcpcongestion_bbr</item>
+        <item>@string/tcpcongestion_cdg</item>
+        <item>@string/tcpcongestion_dctcp</item>
+        <item>@string/tcpcongestion_hybla</item>
+        <item>@string/tcpcongestion_vegas</item>
+        <item>@string/tcpcongestion_nv</item>
+        <item>@string/tcpcongestion_ip</item>
     </string-array>
     <string-array name="tcpcongestion_values">
         <item>0</item>
@@ -258,5 +265,12 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
 </resources>

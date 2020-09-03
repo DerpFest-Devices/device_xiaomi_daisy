@@ -302,6 +302,13 @@
     <string name="tcpcongestion_bic">bic</string>
     <string name="tcpcongestion_highspeed">highspeed</string>
     <string name="tcpcongestion_htcp">htcp</string>
+    <string name="tcpcongestion_bbr">bbr</string>
+    <string name="tcpcongestion_cdg">cdg</string>
+    <string name="tcpcongestion_dctcp">dctcp</string>
+    <string name="tcpcongestion_hybla">hybla</string>
+    <string name="tcpcongestion_vegas">vegas</string>
+    <string name="tcpcongestion_nv">nv</string>
+    <string name="tcpcongestion_ip">ip</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_category">SELinux</string>
