@@ -458,6 +458,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
+# Shims
+PRODUCT_PACKAGES += \
+    libdpmframework_shim
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
