@@ -173,12 +173,12 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.common@2.0 \
     android.frameworks.cameraservice.device@2.0 \
     android.frameworks.cameraservice.service@2.0 \
-    android.frameworks.displayservice@1.0_32 \
+    android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.postproc@1.0 \
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    libdng_sdk.vend \
     Snap
 
 # Configstore

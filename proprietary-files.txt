@@ -18,7 +18,7 @@ vendor/lib/libcapiv2vop.so
 vendor/lib/libdualcameraddm.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libft2vendor.so
-vendor/lib/libgui_vendor.so
+vendor/lib/libgui_vendor.so|90c020e795df4dfdfd6a5722816929069161b42c
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
@@ -45,6 +45,7 @@ vendor/lib/libXMFD_AgeGender.so
 vendor/lib/lib_lowlight.so
 vendor/lib/mibokeh_625_opencl.bin
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
+vendor/lib/android.hardware.camera.provider@2.4-external.so|7818e9b652844f94de7722ff518af907332fd023
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libdualcameraddm.so
@@ -53,6 +54,7 @@ vendor/lib64/libseemore.so
 vendor/lib64/libubifocus.so
 vendor/lib64/libvideoutils.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
+vendor/lib64/android.hardware.camera.provider@2.4-external.so|fbe302ddf6e54f079b1178f5943fcf32ecb693ed
 
 # Camera Actuators - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
 vendor/lib/libactuator_ad5816g.so
