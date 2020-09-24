@@ -5,6 +5,6 @@
   },
   {
     "repository"  : "vendor_xiaomi_daisy",
-    "target_path" : "vendor/xiaomi/"
+    "target_path" : "vendor/xiaomi/daisy"
   }
 ]
