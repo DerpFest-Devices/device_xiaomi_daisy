@@ -50,6 +50,8 @@
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service                   u:object_r:hal_power_default_exec:s0
 
+# Legacy root dirs
+/persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
 
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
