@@ -480,7 +480,8 @@ VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk_package \
+    libstdc++.vendor
 
 # Verity
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/system
