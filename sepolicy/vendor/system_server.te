@@ -2,12 +2,11 @@
 allow system_server init:binder call;
 
 # camera
-#allow system_server mm-qcamerad:binder { call };
-#allow system_server persist_camera_prop:file { getattr read open };
 allow system_server camera_prop:file { getattr read open };
 
 allow system_server sysfs:file { getattr open read };
 allow system_server bluetooth_prop:file { getattr open read };
+
 # input files
 r_dir_file(system_server, idc_file)
 r_dir_file(system_server, keylayout_file)
@@ -44,7 +43,6 @@ allow system_server vendor_default_prop:file { read open getattr map };
 allow system_server system_file:dir { write };
 allow system_server init:process { signal };
 allow system_app hal_power_stats_default:binder { call };
-# allow system_server wfd_debug_prop:file { getattr open read };
 allow system_server proc:file { getattr open read };
 allow system_server sdcardfs:file { getattr open read };
 allow system_server vendor_system_prop:file { getattr open read };
@@ -60,3 +58,5 @@ add_service(system_server, default_android_service);
 
 allow system_server userspace_reboot_config_prop:file { getattr open read };
 allow system_server userspace_reboot_exported_prop:file { getattr open };
+
+add_service(system_server, default_android_service);
