@@ -1905,9 +1905,11 @@ vendor/lib64/libkeymasterutils.so
 
 
 # QC RIL - from LA.UM.8.6.2.r1-06600-89xx.0
-vendor/bin/hw/qcrild|da6f617f9e4645e7147cf7d41ad924e37056db97
+vendor/bin/hw/qcrild|55a9c79ca552f4b9f0084afaae408d005cc445c2
 vendor/etc/init/qcrild.rc|f9c32f5e7a8e7f4a0df1dcce174de169b8d7c060
-vendor/lib64/libqcrilFramework.so|d0d78f822220ee64df0c277bf3470d13e9561c65
-vendor/lib64/libril-qc-hal-qmi.so|c729644ed0b8428d82588f2000ff3b42af165f3b
+vendor/lib64/libqcrilFramework.so|1d257097226095d7f976479bff0beafca85c8b3a
+vendor/lib64/libril-qc-hal-qmi.so|810d94acb1086711336f04084543c8fbf1cc9843
 vendor/lib64/qcrild_librilutils.so|22ae52ea7750c9011e3880852d800d94d54b030e
 
+# DPM - from oneplus8 - qssi-user-11-RP1A.201005.001-2009051300-release-keys
+system_ext/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
