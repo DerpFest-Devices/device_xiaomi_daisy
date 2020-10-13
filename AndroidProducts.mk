@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2017-2018 The LineageOS Project
 #
@@ -14,4 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/potato_daisy.mk
+    $(LOCAL_DIR)/derp_daisy.mk
+
+COMMON_LUNCH_CHOICES := \
+    derp_daisy-user \
+    derp_daisy-userdebug \
+    derp_daisy-eng
