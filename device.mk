@@ -457,6 +457,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_HOST_PACKAGES += \
     signapk
 
+# SurfaceFlinger
+TARGET_USE_QCOM_SURFACEFLINGER := true
+
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
