@@ -2,8 +2,8 @@
 allow system_server init:binder call;
 
 # camera
-allow system_server mm-qcamerad:binder { call };
-allow system_server persist_camera_prop:file { getattr read open };
+#allow system_server mm-qcamerad:binder { call };
+#allow system_server persist_camera_prop:file { getattr read open };
 allow system_server camera_prop:file { getattr read open };
 
 allow system_server sysfs:file { getattr open read };
