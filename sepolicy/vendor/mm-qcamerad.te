@@ -12,7 +12,7 @@ allow mm-qcamerad sysfs_kgsl:file { getattr open read };
 allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
 allow mm-qcamerad sysfs:file { getattr open read };
 allow mm-qcamerad debugfs:dir { read open };
-#allow mm-qcamerad diag_device:chr_file { ioctl open read write };
+allow mm-qcamerad diag_device:chr_file { ioctl open read write };
 #allow mm-qcamerad persist_camera_prop:property_service set;
 allow mm-qcamerad debugfs:file { read open };
 allow mm-qcamerad init:unix_stream_socket connectto;
