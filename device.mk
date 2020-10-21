@@ -168,11 +168,6 @@ BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 PRODUCT_PACKAGES += \
     libbt-vendor
 
-# Binder
-PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.common@2.0 \
@@ -281,6 +276,16 @@ PRODUCT_PACKAGES += \
 # HW crypto
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
+# HWBinder
+ PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor
+
+# HIDLtransport
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor
 
 # IMS
 PRODUCT_PACKAGES += \
