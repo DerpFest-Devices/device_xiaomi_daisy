@@ -209,7 +209,7 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 TARGET_EXCLUDE_QCOM_SEPOLICY := true
 
 # Sepolicy
