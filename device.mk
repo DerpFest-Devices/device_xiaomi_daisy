@@ -172,7 +172,8 @@ BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
