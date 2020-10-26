@@ -127,7 +127,8 @@ sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
-video.accelerate.hw=1
+video.accelerate.hw=1 \
+debug.hwui.renderer=opengl
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
