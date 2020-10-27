@@ -1,3 +1,6 @@
+# ADSP
+type public_adsprpcd_file, file_type;
+
 # Boot reason
 type proc_boot_reason, fs_type, proc_type;
 
@@ -39,4 +42,3 @@ type ifaa_prop, sysfs_type, file_type;
 type sysfs_msmthermal, sysfs_type, file_type;
 type sysfs_corecontrol, sysfs_type, file_type;
 type sysfs_vddrestrict, sysfs_type, file_type;
-type kcal_dev, sysfs_type, file_type;
