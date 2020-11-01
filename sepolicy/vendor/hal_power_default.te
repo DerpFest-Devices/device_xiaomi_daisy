@@ -9,4 +9,4 @@ r_dir_file(hal_power_default, debugfs_rpm)
 r_dir_file(hal_power_default, sysfs_graphics)
 
 allow hal_power_default input_device:chr_file { read write open };
-allow hal_power_default sysfs:file { open read write };
+allow hal_power_default sysfs:file rw_file_perms;

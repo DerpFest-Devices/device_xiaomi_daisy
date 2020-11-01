@@ -207,6 +207,10 @@ on boot
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
     chown system system /sys/kernel/hbtp/display_pwr
+    
+# DT2W Node
+    chown system system /proc/touchpanel/wakeup_gesture
+    chmod 0660 /proc/touchpanel/wakeup_gesture    
 
     # access permission for wlan
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
