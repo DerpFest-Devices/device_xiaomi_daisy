@@ -142,6 +142,10 @@ persist.qfp=false
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false
 
+# Framebuffer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
@@ -263,8 +267,7 @@ persist.vendor.sys.cnd.iwlan=1 \
 persist.vendor.cne.logging.qxdm=3974
 
 # SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ro.surface_flinger.protected_contents=true \
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
 ro.surface_flinger.max_virtual_display_dimension=4096
