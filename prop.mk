@@ -161,6 +161,11 @@ persist.loc.nlp_name=com.qualcomm.location \
 ro.gps.agps_provider=1 \
 ro.ril.def.agps.mode=1
 
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.hardware.egl=adreno \
+ro.hardware.vulkan=adreno
+
 # Phase offsets
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 debug.sf.use_phase_offsets_as_durations=1 \
