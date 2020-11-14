@@ -17,5 +17,3 @@ cc_library_shared {
     name: "android.hidl.base@1.0",
 
 }
-
-
