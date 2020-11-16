@@ -1,13 +1,21 @@
 # Audio ACDB - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
-vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|ba7ede78c818ee5e597b14d3f0ef60af6731aa4e
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|3e73d98568e523f471a86d301f4bb0b345246de0
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|b9974ab5dfba31a8e27a26c64e19e923248133dc
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|3cdebf51d8ab88fd0fa7b534f9706d6981e5e1dc
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|e6bf45c31fd29bcc28fd066cb97895baaf4a7523
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|1eb1feeeaec701998654effd36e9c722709ecd5e
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|8a3970882672ae8a4c2a901303044c9c320bd13c
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|4b9fd5e21d2df5e9237aa3a07e451c2e236b46bf
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|5438a8ae33d7f323173779bb81ee0ac42da879e6
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|ac77c80d2ddc5853f9bcdeb599d4f0c0ad8cdb58
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|279dc326a549df780082151793adde266fedb480
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|ae8ac3dce358dbfeacb90b736793d5ca023aa9db
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|144c397b093137a3af9cc618a6f5434da4a01d08
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|df515758fcd2d5eb6edfad627d2c02642d3b5220
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|ba3d7670485f5e3f5d0f4b5753873875408e0746
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|b780c7d8fdd350a3f7aeffaa0bcf311f5fdda0f6
+vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
 
 # Camera - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
 lib64/libseemore.so
