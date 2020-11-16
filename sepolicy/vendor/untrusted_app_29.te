@@ -6,3 +6,4 @@ allow untrusted_app_29 mirror_data_file:dir getattr;
 allow untrusted_app_29 rootfs:dir { open read };
 allow untrusted_app_29 rootfs:file getattr;
 allow untrusted_app_29 unlabeled:file read;
+allow untrusted_app_29 proc_qtaguid_stat:file { getattr open read };

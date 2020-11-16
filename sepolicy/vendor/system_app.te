@@ -37,6 +37,7 @@ allow system_app sysfs_graphics:file { rw_file_perms };
 allow system_app sysfs_battery_supply:dir { search };
 allow system_app sysfs_battery_supply:file { open read getattr };
 allow system_app unlabeled:file { read };
+allow system_app proc_vmallocinfo:file { getattr open read };
 
 # allow system apps to read battery status
 r_dir_file(system_app, sysfs_battery_supply)
