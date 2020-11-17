@@ -62,6 +62,10 @@ ro.vendor.qti.sys.fw.trim_enable_memory=2147483648 \
 ro.vendor.qti.sys.fw.use_trim_settings=true \
 vendor.vidc.enc.disable.pq=true
 
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.kernel.ebpf.supported=true
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 vidc.enc.dcvs.extra-buff-count=2 \
