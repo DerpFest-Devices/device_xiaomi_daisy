@@ -30,6 +30,9 @@ $(call inherit-product, device/xiaomi/daisy/device.mk)
 # Inherit some common DerpFest Rom stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
+# Inherit some VendorExtra stuff
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
