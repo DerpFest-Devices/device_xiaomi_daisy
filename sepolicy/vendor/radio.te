@@ -5,5 +5,5 @@ allow radio theme_prop:file { read open getattr };
 allow radio system_app_data_file:dir { getattr };
 allow radio sysfs_kgsl:dir { search };
 allow radio cnd:binder { call };
-#allow radio qcom_ims_prop:file { open read getattr };
+allow radio qcom_ims_prop:file { open read getattr };
 allow radio unlabeled:file read;
