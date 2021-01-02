@@ -294,6 +294,7 @@ ro.surface_flinger.max_virtual_display_dimension=4096
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.timed.enable=true \
 persist.vendor.delta_time.enable=true \
+persist.backup.ntpServer=0.pool.ntp.org \
 persist.delta_time.enable=true
 
 # Tcp
