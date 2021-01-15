@@ -179,6 +179,10 @@ ro.lmk.swap_util_max=100 \
 ro.lmk.swap_free_low_percentage=20 \
 ro.lmk.debug=false
 
+# Logging
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.control_privapp_permissions=log
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
