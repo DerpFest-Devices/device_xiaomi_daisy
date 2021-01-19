@@ -17,6 +17,10 @@ vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|ba3d7670485f5e3f5d0f4b5753873875408
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|b780c7d8fdd350a3f7aeffaa0bcf311f5fdda0f6
 vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
 
+# Bluetooth (Audio) - from LA.UM.9.6.2.r1-03300-89xx.0
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|2c5480b33615179e1a8a67bf93e190e8647c68b4
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|0abafcc0c404b67bb0d87128a87cc9deabe54935
+
 # Camera - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
 lib64/libseemore.so
 vendor/lib/libchromaflash.so
