@@ -173,8 +173,12 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 TARGET_KERNEL_CONFIG := sleepy_defconfig
 TARGET_KERNEL_VERSION := 4.9
+
+# Proton
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_USE_LATEST_CLANG := true
+TARGET_KERNEL_CLANG_VERSION := proton
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
