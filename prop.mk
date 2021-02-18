@@ -192,6 +192,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 vendor.iop.enable_uxe=1 \
 vendor.perf.iop_v3.enable=true
 
+# LMKD
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.config.low_ram=false \
+ro.lmk.log_stats=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
