@@ -104,6 +104,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.dex2oat64.enabled=true \
 ro.sys.fw.dex2oat_thread_count=8
 
+# Disable-Blur
+PRODUCT_PRODUCT_PROPERTIES += \
+persist.sys.sf.disable_blurs=1
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.composition.type=c2d \
