@@ -5,3 +5,4 @@ allow isolated_app cnd_vendor_prop:file { read };
 allow isolated_app app_data_file:dir { getattr search setattr };
 allow isolated_app app_data_file:file { setattr };
 allow isolated_app privapp_data_file:file { setattr };
+allow isolated_app unlabeled:file { read };

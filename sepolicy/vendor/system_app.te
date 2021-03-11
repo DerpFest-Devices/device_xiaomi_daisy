@@ -18,10 +18,6 @@ allow system_app sysfs_zram:file { getattr open read };
 allow system_app wificond:binder call;
 allow system_app sysfs_thermal:file { write };
 allow system_app sysfs_kgsl:lnk_file read;
-#allow system_app fm_prop:property_service set;
-#allow system_app persist_camera_prop:file { open getattr read };
-#allow system_app apex_service:service_manager { find };
-#allow system_app persist_camera_prop:file { open getattr read };
 allow system_app system_data_file:dir { write add_name create setattr };
 allow system_app sysfs:file { write open getattr read};
 allow system_app system_data_file:file { create };
@@ -41,15 +37,8 @@ allow system_app proc_vmallocinfo:file { getattr open read };
 
 # allow system apps to read battery status
 r_dir_file(system_app, sysfs_battery_supply)
-allow system_app sysfs_msmthermal:file { open read getattr write };
-allow system_app sysfs_corecontrol:file { open read getattr write };
-allow system_app sysfs_vddrestrict:file { open read getattr write };
-allow system_app cpucore_prop:property_service set;
-get_prop(system_app, cpucore_prop);
 allow system_app lkm_prop:property_service set;
 get_prop(system_app, lkm_prop);
-allow system_app tcp_prop:property_service set;
-get_prop(system_app, tcp_prop);
 
 # fm_radio app needes  open read write on fm_radio_device
 allow system_app fm_radio_device:chr_file r_file_perms;
@@ -57,7 +46,6 @@ allow system_app fm_radio_device:chr_file r_file_perms;
 allow system_app sysfs_leds:file { write open getattr };
 allow system_app sysfs_msm_perf:dir { search };
 allow system_app sysfs_kgsl:dir { search };
-allow system_app selinuxfs:file { read getattr open };
 
 # zram
 r_dir_file(system_app sysfs_zram)

@@ -1,5 +1,3 @@
-#allow untrusted_app_29 sysfs_kgsl:dir { search };
-#allow untrusted_app_29 persist_camera_prop:file { read };
 allow untrusted_app_29 cgroup:dir read;
 allow untrusted_app_29 configfs:dir read;
 allow untrusted_app_29 mirror_data_file:dir getattr;
