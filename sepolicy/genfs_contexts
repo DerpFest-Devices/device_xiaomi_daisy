@@ -18,6 +18,9 @@ genfscon sysfs /devices/soc/soc:qcom,memlat-cpu4                u:object_r:sysfs
 genfscon debugfs /wlan0                               u:object_r:debugfs_wlan:s0
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:vadc@3100 u:object_r:sysfs_battery_supply:s0
 
+# /proc
+genfscon proc /sys/vm/swappiness                      u:object_r:proc_swappiness:s0
+
 # RTC
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8953@0:qcom,pm8953_rtc/rtc/rtc0/hctosys	u:object_r:sysfs_rtc:s0
 

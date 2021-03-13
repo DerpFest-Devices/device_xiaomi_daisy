@@ -31,3 +31,5 @@ type debugfs_rpm, debugfs_type, fs_type;
 type sysfs_power_stats, sysfs_type, fs_type;
 type debugfs_wlan, debugfs_type, fs_type;
 
+# Zram
+type proc_swappiness, proc_type, fs_type;
