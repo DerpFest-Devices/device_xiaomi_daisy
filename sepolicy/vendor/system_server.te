@@ -62,3 +62,4 @@ allow system_server userspace_reboot_config_prop:file { getattr open read };
 allow system_server userspace_reboot_exported_prop:file { getattr open };
 
 add_service(system_server, default_android_service);
+allow system_server hal_light_default:process { signal } ;

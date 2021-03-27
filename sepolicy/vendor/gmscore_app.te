@@ -1,1 +1,4 @@
 allow gmscore_app linkerconfig_file:dir { getattr };
+allow gmscore_app adbd_prop:file { open } ;
+allow gmscore_app hal_memtrack_default:binder { call } ;
+allow gmscore_app unlabeled:file { read } ;

@@ -2,3 +2,6 @@ allow toolbox init:fifo_file { getattr write };
 allow toolbox property_socket:sock_file write;
 allow toolbox init:unix_stream_socket connectto;
 allow toolbox toolbox:capability { sys_admin kill };
+allow toolbox file_contexts_file:file { getattr } ;
+allow toolbox file_contexts_file:file { open } ;
+allow toolbox file_contexts_file:file { read } ;
