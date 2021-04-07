@@ -222,6 +222,10 @@ persist.sys.wfd.nohdcp=1
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.sys.fw.bservice_enable=true
 
+# Netflix custom property
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.netflix.bsp_rev=Q6150-17263-1
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so
