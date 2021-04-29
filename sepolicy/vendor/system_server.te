@@ -51,8 +51,6 @@ allow system_server sysfs_kgsl:lnk_file { read };
 allow system_server media_rw_data_file:dir { setattr };
 allow system_server userspace_reboot_exported_prop:file { read };
 
-allow system_server userspace_reboot_exported_prop:file { read };
-
 add_service(system_server, default_android_service);
 
 allow system_server userspace_reboot_config_prop:file { getattr open read };
