@@ -71,7 +71,7 @@ allow priv_app mnt_product_file:dir { getattr };
 allow priv_app radio_data_file:dir { getattr };
 
 allow priv_app system_app_data_file:dir { getattr };
-allow priv_app adsprpc_prop:file { getattr open read };
+allow priv_app vendor_adsprpc_prop:file { getattr open read };
 allow priv_app apexd_prop:file { getattr open read };
 allow priv_app proc_net:file { getattr open read };
 allow priv_app bpf_progs_loaded_prop:file { getattr open read };

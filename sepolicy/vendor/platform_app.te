@@ -51,7 +51,7 @@ allow platform_app hal_dms_hwservice:hwservice_manager find;
 allow platform_app hal_dms_default:binder { call transfer };
 allow platform_app sysfs_kgsl:lnk_file read;
 allow platform_app system_app_data_file:dir { getattr };
-allow platform_app adsprpc_prop:file { getattr read open };
+allow platform_app vendor_adsprpc_prop:file { getattr read open };
 allow platform_app apexd_prop:file { getattr open read };
 allow platform_app wifi_prop:file { getattr open read };
 allow platform_app bpf_progs_loaded_prop:file { getattr open read };
