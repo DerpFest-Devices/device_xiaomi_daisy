@@ -9,7 +9,6 @@ allow untrusted_app_27 ctl_interface_restart_prop:file { read };
 allow untrusted_app_27 ctl_interface_start_prop:file { read };
 allow untrusted_app_27 ctl_interface_stop_prop:file { read };
 allow untrusted_app_27 ctl_mdnsd_prop:file { read };
-allow untrusted_app_27 ctl_qcrild_prop:file { read };
 allow untrusted_app_27 ctl_restart_prop:file { read };
 allow untrusted_app_27 rootfs:dir { read };
 allow untrusted_app_27 proc_uptime:file { getattr };
