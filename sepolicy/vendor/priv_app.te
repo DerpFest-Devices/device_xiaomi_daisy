@@ -29,7 +29,7 @@ allow priv_app ctl_sigstop_prop:file { getattr open read };
 allow priv_app ctl_start_prop:file { getattr open read };
 allow priv_app ctl_stop_prop:file { getattr open read };
 allow priv_app ctl_vendor_hbtp_prop:file { getattr open read };
-allow priv_app ctl_vendor_imsrcsservice_prop:file { getattr open read };
+allow priv_app vendor_ctl_vendor_imsrcsservice_prop:file { getattr open read };
 allow priv_app spcomlib_prop:file { getattr open read };
 allow priv_app system_boot_reason_prop:file { getattr open read };
 allow priv_app firmware_file:dir { search };

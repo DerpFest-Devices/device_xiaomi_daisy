@@ -1,5 +1,5 @@
 # IMSRCS
-ctl.imsrcsd					u:object_r:ctl_vendor_imsrcsservice_prop:s0
+ctl.vendor.imsrcsd					u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
 
 # Camera
 persist.camera.debug.logfile                                  u:object_r:persist_camera_prop:s0
