@@ -1,2 +1,0 @@
-type ashmemd_exec, fs_type;
-type wificond_service, fs_type;

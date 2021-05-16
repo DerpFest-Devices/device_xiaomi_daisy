@@ -1,1 +1,0 @@
-allow wfdservice vendor_file:file { open getattr execute read };
