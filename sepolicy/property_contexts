@@ -22,3 +22,6 @@ persist.sys.fp.                                               u:object_r:fingerp
 persist.vendor.sys.fp.                                        u:object_r:fingerprint_prop:s0
 ro.boot.fp.                                                   u:object_r:fingerprint_prop:s0
 ro.boot.fpsensor                                              u:object_r:fingerprint_prop:s0
+
+# vendor_radio_prop
+persist.vendor.data.qmipriod_load                u:object_r:vendor_radio_prop:s0
