@@ -223,7 +223,7 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 TARGET_EXCLUDE_QCOM_SEPOLICY := true
 
 # Sepolicy
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Telephony
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
