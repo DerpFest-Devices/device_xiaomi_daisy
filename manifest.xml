@@ -397,6 +397,8 @@
             <name>IFactory</name>
             <instance>default</instance>
         </interface>
+        <fqname>@2.0::IFactory/default</fqname>
+        <fqname>@2.1::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
