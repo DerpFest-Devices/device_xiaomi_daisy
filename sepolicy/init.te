@@ -15,4 +15,3 @@ allow init sysfs_kgsl:file { setattr };
 allow init sysfs_kgsl:lnk_file { read };
 allow init sysfs:file { setattr };
 allow init socket_device:sock_file { create };
-allow init hal_usb_hwservice:hwservice_manager { find };

@@ -31,8 +31,3 @@ type debugfs_rpm, debugfs_type, fs_type;
 type sysfs_power_stats, sysfs_type, fs_type;
 type debugfs_wlan, debugfs_type, fs_type;
 
-type sysfs_fp, sysfs_type, file_type;
-type hal_dms_hwservice, sysfs_type, file_type;
-type hal_dms_default, sysfs_type, file_type;
-
-type ifaa_prop, sysfs_type, file_type;
