@@ -184,16 +184,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno
 
-# LMKD
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.lmk.psi_partial_stall_ms=70 \
-ro.lmk.psi_complete_stall_ms=700 \
-ro.lmk.thrashing_limit=100 \
-ro.lmk.thrashing_limit_decay=10 \
-ro.lmk.swap_util_max=100 \
-ro.lmk.swap_free_low_percentage=20 \
-ro.lmk.debug=false
-
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.control_privapp_permissions=log
