@@ -226,6 +226,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libqdMetaData \
     libgenlock \
+    libnl \
     libtinyxml \
     libdisplayconfig.vendor \
     libqdMetaData \
