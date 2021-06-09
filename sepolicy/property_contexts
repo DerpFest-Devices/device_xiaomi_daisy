@@ -10,6 +10,7 @@ camera.dual.mode           u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
 hardware.camera.autohdr    u:object_r:camera_prop:s0
 wifi.active.interface      u:object_r:exported_wifi_prop:s0
+vendor.target.init.complete                                   u:object_r:vendor_mpctl_prop:s0
 
 # Dirac
 persist.audio.dirac.                                          u:object_r:dirac_prop:s0
