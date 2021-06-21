@@ -70,6 +70,11 @@ $(LOCAL_BUILT_MODULE):
 	$(hide) ln -sf $(ACTUAL_DAT_FILE) $(WCNSS_DAT_SYMLINK)
 	$(hide) touch $@
 
+# Hal
+HAL_PATH := hardware/qcom-caf/msm8996-los
+
+include $(call all-makefiles-under,$(HAL_PATH)/audio)
+
 #A/B builds require us to create the mount points at compile time.
 #Just creating it for all cases since it does not hurt.
 FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
