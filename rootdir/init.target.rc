@@ -199,6 +199,8 @@ on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     start vendor.hvdcp_opti
     start thermal-engine
+    chown system system /sys/class/leds/red/brightness
+    write /sys/class/leds/red/brightness 255
 
 on boot
     # Update cpusets on boot and we want better load balancing
