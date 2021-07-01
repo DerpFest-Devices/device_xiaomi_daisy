@@ -255,6 +255,10 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # GPS
 PRODUCT_PACKAGES += \
     libwifi-hal-ctrl
