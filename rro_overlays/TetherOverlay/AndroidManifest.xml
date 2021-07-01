@@ -15,12 +15,12 @@
 -->
 <!-- Device specific tethering overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.networkstack.tethering.resources.daisy"
+    package="com.google.android.networkstack.tethering.resources.daisy"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />
     <overlay
-      android:targetPackage="com.android.networkstack.tethering.resources"
+      android:targetPackage="com.google.android.networkstack.tethering.resources"
       android:targetName="tetheringCustomization"
       android:isStatic="true"
       android:priority="0"/>
