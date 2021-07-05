@@ -1,0 +1,6 @@
+type powerctl, domain, coredomain;
+type powerctl_exec, exec_type, file_type, system_file_type;
+
+# 由于/data/powercfg.sh的内容具有不确定性，因此对其放宽限制
+permissive powerctl;
+init_daemon_domain(powerctl)

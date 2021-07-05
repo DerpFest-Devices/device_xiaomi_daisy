@@ -1,0 +1,1 @@
+/system/bin/powerctl    u:object_r:powerctl_exec:s0

@@ -1,0 +1,11 @@
+cc_binary {
+    name: "powerctl",
+    init_rc: ["powerctl.rc"],
+    srcs: ["powerctl.cpp"],
+    shared_libs: [
+        "libbase",
+    ],
+    include_dirs: [
+        "system/core/base/include",
+    ]
+}
