@@ -23,7 +23,7 @@ from hashlib import sha1
 device='daisy'
 vendor='xiaomi'
 
-with open('proprietary-files-qc.txt', 'r') as f:
+with open('proprietary-files.txt', 'r') as f:
     lines = f.read().splitlines()
 vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
 needSHA1 = False
@@ -69,5 +69,5 @@ if len(sys.argv) == 2 and sys.argv[1] == '-c':
 else:
     update()
 
-with open('proprietary-files-qc.txt', 'w') as file:
+with open('proprietary-files.txt', 'w') as file:
     file.write('\n'.join(lines) + '\n')
