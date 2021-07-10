@@ -16,6 +16,10 @@ function blob_fixup() {
                 exit;
             fi
             ;;
+            
+            vendor/lib64/libgf_ca.so)
+            sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
+            ;;
                 esac
 }
 

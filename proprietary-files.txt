@@ -2247,7 +2247,7 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Fingerprint - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+# Fingerprint - from daisy V11.0.20.0.PDLMIXM
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk|47d6458be8aece1ad609371baa09a1516564b755
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|866b83e0dce24cd3dd7d8a6ef6fec5bd02de499f
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|d3d9c928ec00a43f5b2859dc5541828d9a95728f
@@ -2263,8 +2263,8 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|4b3e658f52dfe3
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|c9d0251df63d8e34b6d70a59ad7b774c9f640fa1
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|28fc1d738cdd5cde4b31595ec819c4267fb367a3
 
-# Fingerprint firmware - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
-etc/firmware/goodix_firmware.bin|cbd87b30f72e82adf87537fe93911fb2d70bce84
+# Fingerprint Firmware - from daisy V10.0.20.0.PDLMIXM
+etc/firmware/goodix_firmware.bin:vendor/etc/firmware/goodix_firmware.bin|cbd87b30f72e82adf87537fe93911fb2d70bce84
 vendor/firmware/fpctzapp.b00|9cf1d982037e7d06e0c2e2bd18df4400d51ed931
 vendor/firmware/fpctzapp.b01|ad7dc8e0b879e18f865a782ea355e647362b8244
 vendor/firmware/fpctzapp.b02|8e1b7a4fc1b2471670269177c797c1cdd0bccdb0
