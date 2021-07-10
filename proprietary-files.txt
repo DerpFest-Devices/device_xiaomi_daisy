@@ -1970,7 +1970,7 @@ vendor/lib64/camera.device@3.4-impl.so|54f9f5f6d0bb03317628fdf4b984ac65bc83fbc7
 vendor/lib64/camera.device@3.5-external-impl.so|068261e6e09320a60469735f4ae0149bcde75aee
 vendor/lib64/camera.device@3.5-impl.so|c3f431ca6ebb78e5d77495fa02126ca8b4283138
 
-# CDSP - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
+# CDSP - from Daisy QKQ1.191002.002 V11.0.20.0.QDLMIXM
 vendor/bin/cdsprpcd|a1b4c35ffdef184cc1334f3d1cf4fa56546d3621
 vendor/lib/libcdsprpc.so|ad00bd9a9f8e43403fcaf3101cce2b452a636032
 vendor/lib/libcdsp_default_listener.so|5c035d22a100501d090c15786ac720eecec15624
