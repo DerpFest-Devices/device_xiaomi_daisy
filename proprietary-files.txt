@@ -139,7 +139,7 @@ vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|fe0c94096ad70472271c0093ce6b
 
 # Camera - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
 lib64/libseemore.so|eb3d633332755c5153ab0935c784dece0ea8c89e
-vendor/lib/hw/camera.msm8953.so|cc7c58acbac0e6012ec974b09c1268c5d90c278d
+vendor/lib/hw/camera.msm8953.so|d2288242c3996d6185f4cfb18c4c3295472d5620
 vendor/lib/libcapiv2svacnn.so|e505e04cb4281bc6e5f2606d4ddf7c46ae151516
 vendor/lib/libcapiv2vop.so|1be48a1445375458880a28272a0538ba8364d523
 vendor/lib/libchromaflash.so|0d91cf7c1996b3dfd42a5afbdf8e450db4d9d2f7
