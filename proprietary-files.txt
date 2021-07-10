@@ -139,7 +139,7 @@ vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|fe0c94096ad70472271c0093ce6b
 
 # Camera - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
 lib64/libseemore.so|eb3d633332755c5153ab0935c784dece0ea8c89e
-vendor/lib/hw/camera.msm8953.so|d2288242c3996d6185f4cfb18c4c3295472d5620
+vendor/lib/hw/camera.msm8953.so|cc7c58acbac0e6012ec974b09c1268c5d90c278d
 vendor/lib/libcapiv2svacnn.so|e505e04cb4281bc6e5f2606d4ddf7c46ae151516
 vendor/lib/libcapiv2vop.so|1be48a1445375458880a28272a0538ba8364d523
 vendor/lib/libchromaflash.so|0d91cf7c1996b3dfd42a5afbdf8e450db4d9d2f7
@@ -1796,7 +1796,7 @@ vendor/lib/libmmcamera2_c2d_module.so|01365a346eda84e4390d7656dcd29ace85619876
 vendor/lib/libmmcamera2_cpp_module.so|82abd45445ccf7c5c4cb77501083a828b94afaa0
 vendor/lib/libmmcamera2_dcrf.so|8701a3f154ed1dcc8b764a023628bf659d87cd0d
 vendor/lib/libmmcamera2_frame_algorithm.so|6a4f0940f3701e60631faac0ce86e4402782953b
-vendor/lib/libmmcamera2_iface_modules.so|5605323d71b10e3405bd5a405ad73995e55dc71b
+vendor/lib/libmmcamera2_iface_modules.so|353e28c9e06e8d6a3a623a6e786d7788f043f4ef
 vendor/lib/libmmcamera2_imglib_modules.so|618a15547b2afbd77c22ef4c8896ce0ec015ac9f
 vendor/lib/libmmcamera2_is.so|8378b1c33bfd20295b7d2fb6cc36726664c79f81
 vendor/lib/libmmcamera2_isp_modules.so|f69a826f2f4831ec53aeeb8605f96c556267c7d1
@@ -2125,11 +2125,11 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|17f648402c874e4f981caadd9
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|a114629809e67015a14e5e367c6fb374adaafbc2
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|f111cf42439d28fe88d9ebf6b6a1c44b729a3194
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+# Gatekeeper - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|bea6d682011b465a08b9085f7b5e69b965743eee
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|b04d8ae5d3851f29fd8b7c8e034fa0ef04fb96f3
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|4bc9f319b3a62f3d8e3e0c539b577027c263e7df
 
 # GPS - from LA.UM.8.6.2.r1-07600-89xx.0
 vendor/bin/garden_app|666cbf8b4dcc31b84aa62d374fc3f662f5347a71
@@ -2292,20 +2292,20 @@ vendor/lib64/libqti-iopd-client.so|512e12a6a86eb2dc5ad73a590c996d0e67e2ec1a
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|ab7e9d16481a52a919cd7484eed480913ce29e66
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|a99da96aa7abf8b9a4cb950113d7fe4ccbe4ff6c
 
-# Ipacm
-vendor/bin/ipacm-diag
+# Ipacm - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+vendor/bin/ipacm-diag|f08be0dfb0cedecfdf8fae261a3b06f416b56dc2
 
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
-vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
+# Keymaster - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|ac0aabf396888c9dc8b6dc23291e190daa943e24
+vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc|573b7392c8997008204081165cfe81a11080745d
+vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|81dc700d9c58299f48a7a1676b2a15f8d18f65f9
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so|95d84ef473d4cb733297cbf01c5d1e18bb3325d4
+vendor/lib/libkeymasterdeviceutils.so|e3557fd2bc5d01de71b62e378dc51a2696a99768
+vendor/lib/libkeymasterprovision.so|b7a67b7df996341798e01948745dc63f5386b456
+vendor/lib/libkeymasterutils.so|228caaa1bfa8ac3d434f9ac158ca8d1dc1b8c667
+vendor/lib64/libkeymasterdeviceutils.so|784e8f3e6bb36214d171ba127454554049d140f5
+vendor/lib64/libkeymasterprovision.so|245fa13cad4dc81e66bc6fc3b7d20fa6c1afdefc
+vendor/lib64/libkeymasterutils.so|126096a6ce1ce50db8193a4617f1b1b0f6b3105c
 
 # Latency - from LA.UM.8.6.2.r1-07600-89xx.0
 product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar|c6c5d5bbf50b068df0184aef8551b95daa5f4791

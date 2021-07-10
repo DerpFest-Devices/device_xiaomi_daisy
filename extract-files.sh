@@ -5,6 +5,20 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/libmmcamera2_iface_modules.so)
+            # Always set 0 (Off) as CDS mode in iface_util_set_cds_mode
+            sed -i -e 's|\x05\x46\x20\x68|\x05\x46\x00\x20|g' "${2}"
+            PATTERN_FOUND=$(hexdump -ve '1/1 "%.2x"' "${2}" | grep -E -o "60020042" | wc -l)
+            if [ $PATTERN_FOUND != "1" ]; then
+                echo "Critical blob modification weren't applied on ${2}!"
+                exit;
+            fi
+            ;;
+                esac
+}
+
 if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
     return
 fi
