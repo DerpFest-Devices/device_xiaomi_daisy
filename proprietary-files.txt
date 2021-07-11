@@ -2070,7 +2070,7 @@ vendor/lib64/vendor.qti.latency@2.0.so|1589280034898a0ab3052234ef90b7c674d5be5b
 vendor/bin/hvdcp_opti
 
 # Consumer IR
-vendor/lib64/hw/consumerir.default.so
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8953.so
 
 # Display Calibration - from sakura
 vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml|750a2797b45e36812761d6a26a9ba2b91e970c55
