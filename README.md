@@ -1,4 +1,11 @@
-Copyright (C) 2020 The The LineageOS Project
+
+```
+#
+# Copyright (C) 2017-2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+```
 
 The Mi A2 Lite (codenamed _"daisy"_) smartphone from Xiaomi.
 
