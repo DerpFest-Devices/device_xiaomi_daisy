@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2020 The LineageOS Project
+// Copyright (C) 2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,4 +16,27 @@
 cc_library_shared {
     name: "android.hidl.base@1.0",
 
+    vendor: true,
+}
+
+cc_library_shared {
+    name: "android.hidl.manager@1.0",
+
+    vendor: true,
+}
+
+cc_library_shared {
+    name: "android.hidl.base@1.0_system",
+
+}
+
+cc_library_shared {
+    name: "android.hidl.manager@1.0_system",
+
+}
+
+cc_library_shared {
+    name: "android.hidl.base@1.0_vendor",
+
+    vendor: true,
 }
