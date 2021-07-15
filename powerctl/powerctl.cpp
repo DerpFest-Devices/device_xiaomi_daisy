@@ -9,8 +9,6 @@
 #define THERMAL_LEVEL_GAMING 13
 #define THERMAL_LEVEL_BENCHMARK 10
 
-#define POWERCFG_EXEC "/system/bin/sh /data/powercfg.sh"
-
 #define PERFORMANCE_LEVEL_PROP "sys.performance.level"
 
 int main(void)
@@ -29,20 +27,6 @@ int main(void)
         thermal << THERMAL_LEVEL_BENCHMARK << std::endl;
     }
     thermal.close();
-
-    // 调度
-    std::ostringstream oss;
-    oss << POWERCFG_EXEC << " ";
-    if (current == -1 || current == 3) {
-        oss << "balance" << std::endl;
-    } else if (current < 3) {
-        oss << "powersave" << std::endl;
-    } else if (current <= 5) {
-        oss << "performance" << std::endl;
-    } else if (current == 6) {
-        oss << "fast" << std::endl;
-    }
-    system(oss.str().c_str());
 
     return 0;
 }
