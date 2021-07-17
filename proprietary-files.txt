@@ -1,9 +1,9 @@
 #
-# Device proprietary files - from Daisy QKQ1.191002.002-V11.0.20.0.QDLMIXM,
+# Device proprietary files - from Daisy QKQ1.191002.002-V11.0.21.0.QDLMIXM,
 # nokia package version: Nokia/Deadpool_00WW/DPL_sprout:11/RKQ1.200928.002/00WW_3_140:user/release-keys, unless stated otherwise
 #
 
-# ADSP - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
+# ADSP
 vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
 vendor/lib/libadsprpc.so|e00e8dcb88e9b204fd90bb2c32afcc7fa28dbad1
 vendor/lib/libadsp_default_listener.so|c9a1ee00b32a93a9496ec84393afa0625e929eed
@@ -18,7 +18,7 @@ vendor/lib64/libfastcvopt.so|f5e25aa055a57e23530b858bf7dd204a6009effc
 vendor/lib64/libmdsprpc.so|38de6a53d3c2ff60a253c7c6a0d3b46962e8e194
 vendor/lib64/libsdsprpc.so|1e89a33bae491abe4c81bb77c8fabf59bff4b853
 
-# ADSP modules - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
+# ADSP modules
 vendor/lib/rfsa/adsp/dirac_resource.dar|d9b3693eab8c520ef859236b8235752188b7cba0
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so|035272c1d77bcd04e3a838056d512964744c9322
 vendor/lib/rfsa/adsp/libadsp_hvx_skel.so|6a1d6ee55cc65d0f12f6a9bfd04823b46d2d6a24
@@ -33,7 +33,7 @@ vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a2056e1f47239bd1cb40
 
-# Audio - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
+# Audio
 vendor/bin/audioflacapp|a8ae278497715aa53f6fb86d5f5af225da0fc5b0
 vendor/lib/libacdb-fts.so|9fb9fe8f1e22e38e41f1517b8f206a50bbb24419
 vendor/lib/libacdbloader.so|f33941720463b3c8215fc644b7d638c6d8ab74c7
@@ -69,7 +69,7 @@ vendor/lib64/soundfx/libaudiopreprocessing.so|28e2f7f8ab01a6cc8bc60a278e93704755
 vendor/lib64/soundfx/libqcbassboost.so|0d2afd6f2c5b9aa2397f3e1cb3287bf906cf8fb6
 vendor/lib64/soundfx/libqcvirt.so|bb046694512d412d6a04bd95ccb2b573454d9717
 
-# Audio Hardware - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
+# Audio Hardware
 vendor/lib/hw/audio.primary.default.so|ff14977e58b75175644acdc1e94215eeb9808f0b
 vendor/lib/hw/audio.primary.msm8953.so|681f54d3bc6d5bbd3ec4d802b14920f291460606
 vendor/lib64/hw/audio.primary.default.so|21c56b5ff57681e1068de79520e1e3e542392e89
@@ -138,9 +138,9 @@ vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|b6e5d67869138d102595dd0356
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|e9cffc642dc8f15492ca316c276e02c7e146b90d
 vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|fe0c94096ad70472271c0093ce6be226f74e40f4
 
-# Camera - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera
 lib64/libseemore.so|eb3d633332755c5153ab0935c784dece0ea8c89e
-vendor/lib/hw/camera.msm8953.so|d2288242c3996d6185f4cfb18c4c3295472d5620
+vendor/lib/hw/camera.msm8953.so|cc7c58acbac0e6012ec974b09c1268c5d90c278d
 vendor/lib/libcapiv2svacnn.so|e505e04cb4281bc6e5f2606d4ddf7c46ae151516
 vendor/lib/libcapiv2vop.so|1be48a1445375458880a28272a0538ba8364d523
 vendor/lib/libchromaflash.so|0d91cf7c1996b3dfd42a5afbdf8e450db4d9d2f7
@@ -183,7 +183,7 @@ vendor/lib64/libubifocus.so|a533faedc79876045600e9d21faeb6a3edcff893
 vendor/lib64/libvideoutils.so|c34ed2c78135b8d5522205fca36fe2cc5f0a3b0b
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|4967c199bcaf58035217a011442c46ce526338a2
 
-# Camera Actuators - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Actuators
 vendor/lib/libactuator_ad5816g.so|d3396ec0bb6e3462aa897d097b213c6c5de47765
 vendor/lib/libactuator_ad5823.so|1c0958adf1e9decab089cf1685b17eb375b6cab2
 vendor/lib/libactuator_ak7345.so|7dcb5e7829fcabfb1ba5c652275d2bcc60af11b8
@@ -203,16 +203,16 @@ vendor/lib/libactuator_rohm_bu64243gwz.so|c91b31f16cd299efa24aed2ddded144ab6ee8b
 vendor/lib/libactuator_sakura_dw9714v_ofilm.so|d21821093ea7814b9a8d735481abc84cf222a58f
 vendor/lib/libactuator_sakura_dw9714v_sunny.so|4188b0f6eed43a218f3cdff49e563e8efd584523
 
-# Camera Arcsoft - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Arcsoft
 vendor/lib/libarcsoft_beautyshot.so|6e27af412c6df41098905719410848c5c00202ae
 vendor/lib/libarcsoft_dualcam_refocus.so|94dccc693d4ec11f76904337eca393c61f36b2ad
 vendor/lib/libarcsoft_high_dynamic_range.so|fdc82ea4f9fcaa25a51b2c19f243db201bf576dd
 
-# Camera Bin - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Bin
 vendor/bin/mm-qcamera-app|6f6b7f411fc5550896f6fbc26b284fd046d0a6c0
 vendor/bin/mm-qcamera-daemon|255819873e09a5c782fab15009103aeb72d61d94
 
-# Camera Chromatix - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Chromatix 
 vendor/lib/libchromatix_csidtg_common.so|70cd87dd891395b0be1377d4eaeb2156fab50e42
 vendor/lib/libchromatix_csidtg_cpp_preview.so|82dd646c96b08d19ea5ab3e1340d98dd6f0c6791
 vendor/lib/libchromatix_csidtg_postproc.so|cde27c75f5677856c543e56b855c67e58bb1c0af
@@ -1736,7 +1736,7 @@ vendor/lib/libchromatix_sakura_s5k5e8_sunny_snapshot.so|9bd19eeb3e34ca98085521e7
 vendor/lib/libchromatix_sakura_s5k5e8_sunny_zsl_preview_3a.so|d273e84f89ed9a245f5a1d7d4afa4ced820da5da
 vendor/lib/libchromatix_sakura_s5k5e8_sunny_zsl_video_3a.so|d9241ca4d80f4180fd345c692d43e9e9daeb60b6
 
-# Camera Configs - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Configs
 vendor/etc/camera/camera_config.xml|003d9c43ff5332d0a465b85d05cdc260ef2fc69f
 vendor/etc/camera/csidtg_camera.xml|406e2dec13dc910415ff72fc5a7ee084c97ab61f
 vendor/etc/camera/csidtg_chromatix.xml|e95fad08db854906529b4df3c1b238ebbb36b2df
@@ -1776,7 +1776,7 @@ vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_cn.xml|431707c9a2698961dabd8b01b
 vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_factory.xml|edd06e3dcacdd1d88638d2870f15cc5c0039dda0
 vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_india.xml|318ebb835e6f5fa5b44380c0f3703d4bf6ea4c4a
 
-# Camera Firmware - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Firmware
 vendor/firmware/cpp_firmware_v1_10_0.fw|cf9458601aa4bbe9c57acfc1c7d0f158386ace9f
 vendor/firmware/cpp_firmware_v1_12_0.fw|de18ccdf371824059acfdf3c7754c6e1bc1c2f8c
 vendor/firmware/cpp_firmware_v1_1_1.fw|04b8eb253d630eaeadab296e1607dc6a29d93d3c
@@ -1789,26 +1789,26 @@ vendor/firmware/cpp_firmware_v1_5_2.fw|58dd7f7c09dbb62bc6f334a8885064b292610675
 vendor/firmware/cpp_firmware_v1_6_0.fw|dcd3d1f904c7ee3d731f8f28b5f78f2503916ada
 vendor/firmware/cpp_firmware_v1_8_0.fw|26e2badbb4e3049243f0a176722f26879e7b87e8
 
-# Camera OIS - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera OIS 
 vendor/lib/libois_lc898122.so|314aeb690e6da057b4126f462562b5608f510bfe
 
-# Camera Sensors - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera Sensors
 vendor/lib/libmmcamera2_c2d_module.so|01365a346eda84e4390d7656dcd29ace85619876
 vendor/lib/libmmcamera2_cpp_module.so|82abd45445ccf7c5c4cb77501083a828b94afaa0
 vendor/lib/libmmcamera2_dcrf.so|8701a3f154ed1dcc8b764a023628bf659d87cd0d
 vendor/lib/libmmcamera2_frame_algorithm.so|6a4f0940f3701e60631faac0ce86e4402782953b
-vendor/lib/libmmcamera2_iface_modules.so|353e28c9e06e8d6a3a623a6e786d7788f043f4ef
-vendor/lib/libmmcamera2_imglib_modules.so|618a15547b2afbd77c22ef4c8896ce0ec015ac9f
+vendor/lib/libmmcamera2_iface_modules.so|a22ced4dc582d5d9595036109c2237611d8e5b01
+vendor/lib/libmmcamera2_imglib_modules.so|ac1bcc5628658edc7f1232cb9857a0632c71ed40
 vendor/lib/libmmcamera2_is.so|8378b1c33bfd20295b7d2fb6cc36726664c79f81
 vendor/lib/libmmcamera2_isp_modules.so|f69a826f2f4831ec53aeeb8605f96c556267c7d1
-vendor/lib/libmmcamera2_mct.so|189b696a2746ee3bc949d2ca50f51aa8659b3bab
+vendor/lib/libmmcamera2_mct.so|c9eb9e21c9854c6686509158551cdc5b0b32867c
 vendor/lib/libmmcamera2_mct_shimlayer.so|8de0f30b2f02a6dd29e03067f4e39ec45a39b797
 vendor/lib/libmmcamera2_pproc_modules.so|2dd5584c34d1851cc79f2d29abadf4ef8c33021e
 vendor/lib/libmmcamera2_pp_buf_mgr.so|8c527ab0d2acbd080f270dddb49784cb2a82c7f2
 vendor/lib/libmmcamera2_q3a_core.so|b1e1a8232d5671ca052695a99619343320dbeeca
-vendor/lib/libmmcamera2_sensor_modules.so|57eae3214f307d19416b264a1504f04491649904
+vendor/lib/libmmcamera2_sensor_modules.so|e98dc6e9dd6230fc45eed9c13217fcfcd2060155
 vendor/lib/libmmcamera2_stats_algorithm.so|8626091b1530fab04cca959b089d44ecc0e613f3
-vendor/lib/libmmcamera2_stats_modules.so|cc4bc6cc2e83d41e2e84af20cfca5b047b0cfd47
+vendor/lib/libmmcamera2_stats_modules.so|00db38fc4c6a31949db51da85ce556929b3b5fb8
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so|e1f2e7fcf0aa04ea463e1d22e4c2e23627b41fdb
 vendor/lib/libmmcamera_chromaflash_lib.so|bfa02ad224597086a6ffb904e703372b64c0c760
 vendor/lib/libmmcamera_csidtg.so|66ebfa4d529f759757f8f3d46f3fe766c1eb3bb4
@@ -1947,7 +1947,7 @@ vendor/lib64/libmmcamera_dbg.so|af8036f5f18c62432e690147b00010f694075966
 vendor/lib64/libmmcamera_tintless_algo.so|5a4177a8cd0ae191419dfdd3060bf7b28b730432
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so|9f12e00cdc797a07c82c871e1d9a4f6758afd151
 
-# Camera HIDL (HACK NEEDED) - from daisy QKQ1.191002.002 V11.0.18.0.QDLMIXM
+# Camera HIDL (HACK NEEDED)
 vendor/bin/hw/android.hardware.camera.provider@2.4-service|29ee46f14cad4468c7c33bd5d5de6d3c4f3018b4
 vendor/etc/init/android.hardware.camera.provider@2.4-service.rc|655b17a43029e65318a38dbfa9183f7d2621679f
 vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so|7096f440cde362f2539d8159b5d3fdab6181c83f
@@ -1971,7 +1971,7 @@ vendor/lib64/camera.device@3.4-impl.so|54f9f5f6d0bb03317628fdf4b984ac65bc83fbc7
 vendor/lib64/camera.device@3.5-external-impl.so|068261e6e09320a60469735f4ae0149bcde75aee
 vendor/lib64/camera.device@3.5-impl.so|c3f431ca6ebb78e5d77495fa02126ca8b4283138
 
-# CDSP - from Daisy QKQ1.191002.002 V11.0.20.0.QDLMIXM
+# CDSP - from 
 vendor/bin/cdsprpcd|a1b4c35ffdef184cc1334f3d1cf4fa56546d3621
 vendor/lib/libcdsprpc.so|ad00bd9a9f8e43403fcaf3101cce2b452a636032
 vendor/lib/libcdsp_default_listener.so|5c035d22a100501d090c15786ac720eecec15624
@@ -2271,7 +2271,7 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|4b3e658f52dfe3
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|c9d0251df63d8e34b6d70a59ad7b774c9f640fa1
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|0c5745649eac2b5478ef891a51b18b999bb45fce
 
-# Fingerprint Firmware - from daisy V10.0.20.0.PDLMIXM
+# Fingerprint Firmware - from Sakura MIUI Pie
 vendor/firmware/goodix_firmware.bin|cbd87b30f72e82adf87537fe93911fb2d70bce84
 vendor/firmware/fpctzapp.b00|9cf1d982037e7d06e0c2e2bd18df4400d51ed931
 vendor/firmware/fpctzapp.b01|3d4cd343a326b10119315fc9e02ffedf6dfd2f77
@@ -2301,10 +2301,10 @@ vendor/lib64/libqti-iopd-client.so|512e12a6a86eb2dc5ad73a590c996d0e67e2ec1a
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|ab7e9d16481a52a919cd7484eed480913ce29e66
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|a99da96aa7abf8b9a4cb950113d7fe4ccbe4ff6c
 
-# Ipacm - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+# Ipacm
 vendor/bin/ipacm-diag|f08be0dfb0cedecfdf8fae261a3b06f416b56dc2
 
-# Keymaster - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+# Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|ac0aabf396888c9dc8b6dc23291e190daa943e24
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc|573b7392c8997008204081165cfe81a11080745d
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|81dc700d9c58299f48a7a1676b2a15f8d18f65f9
