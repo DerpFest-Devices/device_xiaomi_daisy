@@ -43,14 +43,18 @@ on fs
     mkdir /mnt/vendor/persist/bms 0700 root system
     restorecon_recursive /mnt/vendor/persist
 
+    # Start HW service manager early
+    start hwservicemanager
+
 on late-fs
     # Start services for bootanim
-    start hwservicemanager
     start servicemanager
-    start surfaceflinger
-    start bootanim
     # mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
+
+    # Make sure HW service manager started and start required HAL services
+    wait_for_prop hwservicemanager.ready true
+    start vendor.gralloc-2-0
 
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
