@@ -52,8 +52,6 @@ on late-fs
     # mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
-    # Make sure HW service manager started and start required HAL services
-    wait_for_prop hwservicemanager.ready true
     start vendor.gralloc-2-0
 
 on init
