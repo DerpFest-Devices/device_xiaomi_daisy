@@ -664,7 +664,7 @@
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
 
     <!-- Set the default dialer package name. -->
-    <string name="config_defaultDialer" translatable="false">com.android.dialer</string>
+    <string name="config_defaultDialer" translatable="false">com.google.android.dialer</string>
 
     <!-- This should yield considerable SQLite performance gains. It
          should be generally safe as this device has irremovable battery. -->
