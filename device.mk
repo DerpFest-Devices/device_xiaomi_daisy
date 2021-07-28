@@ -272,7 +272,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # QCOM variant
-    OVERRIDE_QCOM_HARDWARE_VARIANT := msm8996-los
+    TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
+    TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
+    TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
+
+#HALS
+    SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8996/media
+    SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8996/display
+    SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8996/audio
+    PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/msm8996/display
+    PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/msm8996/audio
+    PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/msm8996/media
 
 # Healthd
 PRODUCT_PACKAGES += \
