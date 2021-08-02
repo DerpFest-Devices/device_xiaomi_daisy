@@ -10,18 +10,17 @@
         "clone-depth": "1"
     },
     {
-        "repository" : "acras01/vendor_custom_prebuilts",
+        "repository" : "ZunayedDihan/vendor_custom_prebuilts",
         "target_path": "vendor/custom/prebuilts",
         "branch"     : "master",
         "clone-depth": "1",
         "remote"     : "github"
     },
     {
-        "repository" : "geopd/Mystique_sakura",
-        "target_path": "kernel/xiaomi/msm8953",
-        "branch"     : "4.9-R",
-        "clone-depth": "1",
-        "remote"     : "github"
+        "remote"  : "github", 
+        "repository" : "LinkBoi00-Development/kernel_xiaomi_msm8953",
+        "target_path" : "kernel/xiaomi/msm8953",
+        "branch" : "eleven"
     },
     {
         "repository" : "mvaisakh/gcc-arm64",
