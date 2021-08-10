@@ -591,8 +591,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-# Don't build debug for host or device
+# Speed profile services and wifi-service to reduce RAM and storage.
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Do not generate libartd. (on userdebug/eng as well)
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Don't build debug for host or device
 ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
