@@ -1,4 +1,4 @@
-on boot
+on early-boot
     # leds light
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/red/blink
