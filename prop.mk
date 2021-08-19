@@ -183,14 +183,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno
 
-# LMKD
-PRODUCT_PRODUCT_PROPERTIES += \
-ro.lmk.critical_upgrade=true \
-ro.lmk.upgrade_pressure=40 \
-ro.lmk.downgrade_pressure=60 \
-ro.lmk.thrashing_limit=30 \
-ro.lmk.thrashing_limit_decay=50
-
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.control_privapp_permissions=log
