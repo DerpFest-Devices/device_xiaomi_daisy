@@ -251,6 +251,10 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8953
+
 # GPS
 PRODUCT_PACKAGES += \
     libwifi-hal-ctrl
