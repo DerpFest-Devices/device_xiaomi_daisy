@@ -3,6 +3,7 @@ typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
 type_transition hal_fingerprint_default system_data_file:{ dir file } gx_fpd_data_file;
 
 add_service(hal_fingerprint_default, goodix_fingerprint_vndservice);
+binder_use(hal_fingerprint_default);
 r_dir_file(hal_fingerprint_default, firmware_file);
 set_prop(hal_fingerprint_default, fingerprint_prop);
 vndbinder_use(hal_fingerprint_default);
@@ -23,14 +24,3 @@ allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
 allow hal_fingerprint_default gx_fpd_data_file:dir create_dir_perms;
 allow hal_fingerprint_default system_data_file:dir create_dir_perms;
 allow hal_fingerprint_default gx_fpd_data_file:file create_file_perms;
-
-allow hal_fingerprint_default media_rw_data_file:dir r_dir_perms;
-r_dir_file(hal_fingerprint_default, mnt_user_file)
-r_dir_file(hal_fingerprint_default, storage_file)
-r_dir_file(hal_fingerprint_default, sysfs_battery_supply)
-r_dir_file(hal_fingerprint_default, sysfs_leds)
-r_dir_file(hal_fingerprint_default, vfat)
-
-allow hal_fingerprint_default goodix_fp_hwservice:hwservice_manager add;
-allow hal_fingerprint_default goodix_fp_hwservice:hwservice_manager { find } ;
-allow hal_fingerprint_default system_prop:property_service { set } ;
