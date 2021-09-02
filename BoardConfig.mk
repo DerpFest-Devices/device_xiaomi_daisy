@@ -166,7 +166,9 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 TARGET_KERNEL_CONFIG := sakura_defconfig
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
-KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32 := arm-eabi-
+KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
+KERNEL_TOOLCHAIN_ARM32 := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi/bin
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
