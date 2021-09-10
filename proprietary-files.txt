@@ -1164,7 +1164,6 @@ system_ext/lib/libmmosal.so|8c7f0a071f84ec2ac9522bf448cb902a3ece2405
 system_ext/lib/libmmparser_lite.so|f7ed21ea0de0de02741854d78518c977ef5763f5
 system_ext/lib64/libmmosal.so|ef19a38be8283c87eabe96f74bc8a71881ab1f0a
 system_ext/lib64/libmmparser_lite.so|c92a64786291bd6cd6b9c111e149633d07b5f3f1
-vendor/lib/libI420colorconvert.so|5a7726bbd8c7343e05d6251185fa72ed27b3da5c
 vendor/lib/libmm-color-convertor.so|7e1536ab3926ece1da6c6a73cb5b1635f75762c7
 vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
 vendor/lib/libOmxAacDec.so|7c7ffe4f9ae9881b66ecde16bae36e9fb9a26676
@@ -1179,7 +1178,6 @@ vendor/lib/libOmxQcelp13Dec.so|4424762bcf639284112395b4c9d63cb58c799638
 vendor/lib/libOmxVideoDSMode.so|71c4f23de93e91931c077ed511301185152422da
 vendor/lib/libOmxWmaDec.so|c47e74a73afa486429c009f338779cd78566f77c
 vendor/lib/libvqzip.so|f85628ea634df1c31d69380d960ad7ea3396e7b2
-vendor/lib64/libI420colorconvert.so|e00f84027fb2628055310d26a4fc970434a60648
 vendor/lib64/libmm-color-convertor.so|26ed405a100be543e39e0720ce7ee49ce7148f49
 vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 vendor/lib64/libOmxAacDec.so|5d939a384e01caba6d1043dc94cb23a7eb116fe8
