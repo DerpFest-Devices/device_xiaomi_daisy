@@ -107,11 +107,10 @@ vendor/lib/hw/audio.primary.msm8953.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.msm8953.so
 
-# Audio dirac - from xiaomi
-lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
-vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
-vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
-vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
+# Audio dirac - from mido-user 7.0 NRD90M V11.0.2.0.NCFCNXM release-keys
+lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
+lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so|3a935f5bdb20554478fc49a163a187afcf9b9b6b
+vendor/etc/diracmobile.config|b861d128e40bb8d259f5d21067bd437e2d7a68e6
 
 # ANT+ (vendor)
 vendor/lib64/com.qualcomm.qti.ant@1.0.so
