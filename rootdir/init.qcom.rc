@@ -426,11 +426,9 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
     write /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power 1
 
-    #Starting perf properly
-    setprop vendor.post_boot.parsed 1
-
     chown media audio /sys/kernel/aud_dev/state
 
+    #Starting perf properly
     # This initializes vendor.qti.hardware.perf service
     setprop vendor.post_boot.parsed 1
 
