@@ -79,7 +79,8 @@ persist.vendor.camera.eis.enable=1 \
 persist.vendor.camera.gyro.disable=0 \
 persist.vendor.camera.isp.clock.optmz=0 \
 persist.vendor.camera.stats.test=5 \
-persist.camera.HAL3.enabled=1
+persist.vendor.camera.CDS=off \
+persist.vendor.camera.HAL3.enabled=1
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
