@@ -285,6 +285,11 @@ persist.rcs.supported=1
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.build.shutdown_timeout=2
 
+# Soc
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+ro.soc.manufacturer=QTI \
+ro.soc.model=MSM8953
+
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ro.surface_flinger.protected_contents=true \
