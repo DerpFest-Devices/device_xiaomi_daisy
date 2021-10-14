@@ -253,6 +253,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # GPS
 PRODUCT_PACKAGES += \
     libwifi-hal-ctrl
@@ -270,7 +274,7 @@ PRODUCT_COPY_FILES += \
     TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
     TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
 
-#HALS
+# HALS
     SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8996/media
     SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8996/display
     SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8996/audio
@@ -340,6 +344,10 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
