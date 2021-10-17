@@ -165,6 +165,7 @@ BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
+    bt_stack.conf \
     android.hardware.bluetooth@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
@@ -173,6 +174,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
+    android.frameworks.displayservice@1.0.vendor \
     libstdc++.vendor \
     camera.msm8953 \
     libdng_sdk.vendor \
@@ -214,6 +216,7 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libnl \
     libtinyxml \
+    libtinyxml.vendor \
     libdisplayconfig.vendor \
     libqdMetaData \
     libqdMetaData.vendor \
@@ -262,6 +265,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@3.0.vendor \
     libwifi-hal-ctrl
 
 PRODUCT_COPY_FILES += \
@@ -472,8 +476,15 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.0.vendor \
     librmnetctl \
+    librmnetctl.vendor \
     libcnefeatureconfig \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
