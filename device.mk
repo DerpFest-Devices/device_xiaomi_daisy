@@ -602,9 +602,6 @@ PRODUCT_PACKAGES += \
     libwfdaac \
     libmediaextractorservice
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=false
 
