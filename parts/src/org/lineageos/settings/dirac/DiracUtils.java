@@ -29,9 +29,6 @@ public final class DiracUtils {
         if (!mInitialized) {
             mInitialized = true;
             mDiracSound = new DiracSound(0, 0);
-            mDiracSound.setMusic(mDiracSound.getMusic());
-            mDiracSound.setHeadsetType(mDiracSound.getHeadsetType());
-            setLevel(getLevel());
         }
     }
 
@@ -49,16 +46,6 @@ public final class DiracUtils {
         for (int band = 0; band <= level.length - 1; band++) {
             mDiracSound.setLevel(band, Float.valueOf(level[band]));
         }
-    }
-
-    protected static String getLevel() {
-        String selected = "";
-        for (int band = 0; band <= 6; band++) {
-            int temp = (int) mDiracSound.getLevel(band);
-            selected += String.valueOf(temp);
-            if (band != 6) selected += ",";
-        }
-        return selected;
     }
 
     protected static void setHeadsetType(int paramInt) {
