@@ -99,4 +99,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.GoogleCamera">
         <permission name="android.permission.BIND_WALLPAPER"/>
     </privapp-permissions>
+    <privapp-permissions package="com.dsi.ant.service.socket">
+        <permission name="com.dsi.ant.permission.ANTRADIO"/>
+    </privapp-permissions>
 </permissions>
