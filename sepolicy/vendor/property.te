@@ -1,2 +1,2 @@
 # Dirac
-type dirac_prop, property_type;
+type dirac_prop, vendor_property_type, property_type;
