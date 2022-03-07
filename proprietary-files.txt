@@ -1081,7 +1081,6 @@ vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.default.s
 vendor/lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/gf_fingerprint.goodix.default.so|476c220ea105a01658ba1dc11c005c48cbc79679
 
 # Fingerprint Firmware - from daisy V10.0.2.0.PDLMIFJ
-etc/firmware/goodix_firmware.bin:vendor/etc/firmware/goodix_firmware.bin|cbd87b30f72e82adf87537fe93911fb2d70bce84
 vendor/firmware/fpctzapp.b00|9cf1d982037e7d06e0c2e2bd18df4400d51ed931
 vendor/firmware/fpctzapp.b01|a2fea6a8f0bc9c6ab945ffcd3e84ac266639b223
 vendor/firmware/fpctzapp.b02|8e1b7a4fc1b2471670269177c797c1cdd0bccdb0
@@ -1557,6 +1556,9 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|d4d025e0a12af87f65104
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|1a3bd8be98867f7af79edd76a25ec00865fd8915
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|1ac676dca4c81094b254b62f1b608e471b385847
+
+# Touchscreen firmware
+etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
 
 # Widevine - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|b626d9bbf7043c66c8ef903c9d0e5183fc47388d
