@@ -109,6 +109,7 @@ debug.gralloc.enable_fb_ubwc=1 \
 debug.hwui.renderer=opengl \
 debug.mdpcomp.idletime=600 \
 debug.mdpcomp.logs=0 \
+debug.renderengine.backend=threaded \
 debug.performance.tuning=1 \
 debug.sf.disable_backpressure=1 \
 debug.sf.disable_hwc=0 \
