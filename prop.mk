@@ -170,7 +170,7 @@ ro.ril.def.agps.mode=1
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.hardware.egl=adreno \
-ro.hardware.vulkan=adreno
+ro.hardware.vulkan=msm8953
 
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
